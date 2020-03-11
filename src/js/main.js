@@ -97,8 +97,38 @@ const sliderAboutPartner = () => {
 			}
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.slider-about-partner .swiper-button-next',
+			prevEl: '.slider-about-partner .swiper-button-prev',
+		},
+	})
+}
+
+const sliderProjects = () => {
+	var swiper = new Swiper('.slider-projects .swiper-container', {
+		loop: true,
+		speed: 1000,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		spaceBetween: 60,
+		grabCursor: true,
+		watchSlidesProgress: true,
+		mousewheelControl: true,
+		keyboardControl: true,
+		slidesPerView: 1,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			1140: {
+				slidesPerView: 3,
+			}
+		},
+		navigation: {
+			nextEl: '.slider-projects .swiper-button-next',
+			prevEl: '.slider-projects .swiper-button-prev',
 		},
 	})
 }
@@ -163,16 +193,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	Loading();
 	// SLIDER
 	mainSlider();
-	// checkLayoutBanner();
 	sliderPartner();
 	sliderFacilities();
+	sliderProjects();
+	// checkLayoutBanner();
 	ajaxMailFooter();
 	menuMobile();
 	toggleMenuMobile();
-	setHeightOverFolowBySomeElement('.about-2, .about-3');
+	setHeightOverFolowBySomeElement('.about-2, .about-3, .list-news');
 	sliderAboutPartner();
 });
 
 document.addEventListener('resize', () => {
-	setHeightOverFolowBySomeElement('.about-2, .about-3');
+	setHeightOverFolowBySomeElement('.about-2, .about-3, .list-news');
 })

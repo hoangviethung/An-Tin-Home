@@ -1,0 +1,87 @@
+.contact {
+	margin: 50px 0;
+
+	.block-title {
+		max-width: 587px;
+		margin   : 0 auto;
+
+		h2 {
+			line-height: 1;
+			font-size  : 100px;
+			color      : #d3d3d3;
+		}
+
+		h3 {
+			font-size    : 24px;
+			color        : map-get($mau, main);
+			margin-top   : 20px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size : 14px;
+			color     : #5d5d5d;
+			margin-top: 5px;
+			font-style: italic;
+		}
+	}
+
+	.block-form {
+		max-width: 587px;
+		margin   : 50px auto 0;
+
+		.form-group {
+			margin-bottom: 15px;
+		}
+
+		input.form-control {
+			padding      : 0.5em 0.5em;
+			resize       : vertical;
+			width        : 100%;
+			max-width    : 35em;
+			border       : 1px solid #c5c5c5;
+			border-radius: 0.4em;
+		}
+
+		textarea.form-control {
+			padding      : 0.5em 0.5em;
+			resize       : none;
+			width        : 100%;
+			max-width    : 35em;
+			border       : 1px solid #c5c5c5;
+			border-radius: 0.4em;
+			height       : 115px;
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		.block-title {
+			max-width: unset;
+			margin   : 0 15px;
+
+			h2 {
+				font-size: 100px;
+			}
+
+			h3 {
+				font-size: 32px;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		margin-top: 25px;
+
+		.block-title {
+			h2 {
+				font-size: 56px;
+			}
+
+			h3 {
+				font-size    : 18px;
+				margin-top   : 10px;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
