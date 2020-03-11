@@ -14,7 +14,7 @@ html(lang="en")
 	body
 		#loading
 			.logo-loader
-				img(src="./assets/loading.gif")
+				img(src="./assets/logo.svg")
 			.progstat-wrapper Loading:
 				span#progstat 0
 				| %
@@ -26,6 +26,7 @@ html(lang="en")
 		main
 			block main
 			#js-page-verify(class=bodyClass hidden)
+			include ../index/i-5
 		block footer
 			include _footer.pug
 		//- end main content
