@@ -2,17 +2,42 @@ section.contact
 	.block-send-mail
 		.container
 			.block-title
-				h2 LIÊN HỆ
-				h3 AN TÍN GROUP
+				h2.wow.fadeInDown(data-wow-delay=".2s") LIÊN HỆ
+				h3.wow.fadeInUp(data-wow-delay=".2s") AN TÍN GROUP
 				p.lcl.lcl-2 Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
 			.block-form
 				form(action="#" method="method")
 					.form-group
-						input.form-control(type="text" placeholder="Nhập tên*")
+						input.form-control.name(type="text" placeholder="Nhập tên*")
 					.form-group
-						input.form-control(type="text" placeholder="Nhập email*")
+						input.form-control.email(type="text" placeholder="Nhập email*")
 					.form-group
-						input.form-control(type="text" placeholder="Nhập số điện thoại*")
+						input.form-control.phone-number(type="text" placeholder="Nhập số điện thoại*")
 					.form-group
-						textarea.form-control(placeholder="Nhập email *")
+						textarea.form-control.content(placeholder="Nhập nội dung *")
+					.block-recaptcha-submit
+						.recaptcha
+							img(src="./assets/recaptcha.gif", alt="", srcset="")
+						.submit
+							button.btn.read-more.main-color(data-url="ajax") GỬI
 	.block-address
+		.container
+			.block-title
+				h2.wow.fadeInDown(data-wow-delay=".2s") CHI NHÁNH
+				h3.wow.fadeInUp(data-wow-delay=".2s") AN TÍN GROUP
+				p.lcl.lcl-2 Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+			ul.list-info-company
+				li.item
+					span Địa chỉ:
+					p Tòa nhà H3, 384 Hoàng Diệu, Quận 4, TP.Hồ Chí Minh
+				li.item
+					span Email:
+					p info@antingroup.vn
+				li.item
+					span Fax:
+					p 028. 38266766
+				li.item.phone
+					.icon
+						img(src="./assets/icons/phone.png", alt="alt")
+					a(href="tel:02838266766") 028. 38266766
+			#map

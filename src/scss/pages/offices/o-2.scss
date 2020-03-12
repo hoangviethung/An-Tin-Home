@@ -1,0 +1,132 @@
+.offices-detail {
+	margin: 50px 0;
+
+	.title {
+		position      : relative;
+		color         : #5e5e5e;
+		padding-bottom: 1rem;
+		color         : map-get($mau, main);
+		font-size     : 24px;
+		font-weight   : 700;
+
+		&:after {
+			bottom          : 0;
+			left            : 0;
+			height          : 5px;
+			width           : 2.2em;
+			content         : '';
+			background-color: #fdc52d;
+			position        : absolute;
+		}
+	}
+
+	.block-tab-offices-detail {
+		margin-top: 50px;
+
+		.list-tab {
+			list-style-type: none;
+			padding-left   : 0;
+			display        : flex;
+			flex-wrap      : wrap;
+			margin-right   : -10px;
+			margin-left    : -10px;
+
+			.item {
+				-ms-flex        : 0 0 100%;
+				-webkit-box-flex: 0;
+				flex            : 0 0 20%;
+				max-width       : 20%;
+				padding-right   : 10px;
+				padding-left    : 10px;
+
+				.link {
+					cursor        : pointer;
+					padding       : 10px;
+					text-align    : center;
+					background    : map-get($mau, main);
+					font-weight   : 700;
+					color         : #ffffff;
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		.tab-content {
+			.list-image-detail {
+				display     : flex;
+				flex-wrap   : wrap;
+				margin-right: -10px;
+				margin-left : -10px;
+
+				.item {
+					-ms-flex        : 0 0 100%;
+					-webkit-box-flex: 0;
+					flex            : 0 0 25%;
+					max-width       : 25%;
+					padding-right   : 10px;
+					padding-left    : 10px;
+					margin-bottom   : 20px;
+					height          : 200px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		.block-tab-offices-detail {
+			.list-tab {
+				.item {
+					flex         : 0 0 33.33333%;
+					max-width    : 33.33333%;
+					margin-bottom: 20px;
+
+					.link {
+						font-size: 14px;
+					}
+				}
+			}
+
+			.tab-content {
+				.list-image-detail {
+					.item {
+						flex     : 0 0 33.333333%;
+						max-width: 33.333333%;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		margin: 25px 0;
+
+		.title {
+			font-size: 16px;
+		}
+
+		.block-tab-offices-detail {
+			margin-top: 25px;
+
+			.list-tab {
+				.item {
+					flex     : 0 0 50%;
+					max-width: 50%;
+
+					.link {
+						font-size: 12px;
+					}
+				}
+			}
+
+			.tab-content {
+				.list-image-detail {
+					.item {
+						flex     : 0 0 50%;
+						max-width: 50%;
+						height   : 120px;
+					}
+				}
+			}
+		}
+	}
+}

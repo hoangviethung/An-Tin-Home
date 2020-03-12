@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Dự án chi tiết';
+	- let bodyClass = 'project-page';
+
+block banner,breadcrumb
+	include ./_components/banner/main-banner
+block main
+	include ./_components/projects/p-2
+	include ./_components/projects/p-3
+block scripts

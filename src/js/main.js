@@ -1,5 +1,6 @@
 import Cookie from "./lib/Cookie";
 import Loading from "./lib/Loading";
+import Tab from "./lib/Tab";
 
 const mainSlider = () => {
 	var swiper = new Swiper('.block-main-banner .swiper-container', {
@@ -133,6 +134,37 @@ const sliderProjects = () => {
 	})
 }
 
+const sliderItemOthers = () => {
+	var swiper = new Swiper('.slider-item-others .swiper-container', {
+		loop: true,
+		speed: 1000,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		spaceBetween: 10,
+		grabCursor: true,
+		watchSlidesProgress: true,
+		mousewheelControl: true,
+		keyboardControl: true,
+		slidesPerView: 2,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			1140: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		},
+		navigation: {
+			nextEl: '.slider-item-others .swiper-button-next',
+			prevEl: '.slider-item-others .swiper-button-prev',
+		},
+	})
+}
+
 const ajaxMailFooter = () => {
 	$('footer .block-form button').on('click', function(e) {
 		e.preventDefault();
@@ -143,6 +175,34 @@ const ajaxMailFooter = () => {
 			url: url,
 			data: {
 				email: email,
+			},
+			success: function(res) {
+				if (res.Code === 200) {
+					alert(res.Message)
+				} else {
+					alert(res.Message)
+				}
+			}
+		});
+	});
+}
+
+const ajaxFormContact = () => {
+	$('.block-send-mail .block-form .submit button').on('click', function(e) {
+		e.preventDefault();
+		const url = $(this).attr('data-url');
+		const name = $('.contact .block-send-mail .block-form input.name').val();
+		const email = $('.contact .block-send-mail .block-form input.email').val();
+		const phone = $('.contact .block-send-mail .block-form input.phone-number').val();
+		const content = $('.contact .block-send-mail .block-form textarea.content').val();
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: {
+				name: name,
+				email: email,
+				phone: phone,
+				content: content,
 			},
 			success: function(res) {
 				if (res.Code === 200) {
@@ -189,19 +249,38 @@ const setHeightOverFolowBySomeElement = (selector) => {
 	})
 }
 
+const scrollAbout = () => {
+	$('.about-1 .list-menu .link').on('click', function() {
+		const address = $(this).attr('data-sroll');
+		console.log(address);
+
+		$('html, body').animate({
+			scrollTop: ($(address).offset().top)
+		}, 500);
+	});
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-	Loading();
+	Loading().then(() => {
+		new WOW().init();
+		// GET HEIGHT SOMWE ELEMENT
+		setHeightOverFolowBySomeElement('.about-2, .about-3, .list-news');
+	});
 	// SLIDER
 	mainSlider();
 	sliderPartner();
 	sliderFacilities();
 	sliderProjects();
+	sliderItemOthers();
+	scrollAbout();
 	// checkLayoutBanner();
 	ajaxMailFooter();
+	ajaxFormContact();
 	menuMobile();
 	toggleMenuMobile();
-	setHeightOverFolowBySomeElement('.about-2, .about-3, .list-news');
 	sliderAboutPartner();
+	// TAB
+	const tabOfficesDetail = new Tab('.block-tab-offices-detail');
 });
 
 document.addEventListener('resize', () => {

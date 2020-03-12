@@ -1,13 +1,13 @@
 extends _components/_layout/_layout.pug
 
 block var
-	- let title = 'Liên hệ';
-	- let bodyClass = 'contact-page';
+	- let title = 'Cho thuê văn phòng chi tiết';
+	- let bodyClass = 'offices-page';
 
 block banner,breadcrumb
 	include ./_components/banner/main-banner
 block main
-	include ./_components/contact/c-1
+	include ./_components/offices/o-2
 block scripts
 	script.
 		var locationsInput = [
@@ -17,13 +17,6 @@ block scripts
 				title: 'Home',
 				address: '134/8A, Trần Bá Giao, Q.Gò Vấp, Tp. HCM',
 				phone: '0914.633.990'
-			},
-			{
-				lat: 10.1251,
-				lng: 10.120,
-				title: 'Company',
-				address: '192/68, Nguyễn Oanh, Q.Gò Vấp, TP.HCM',
-				phone: '0905.010.115'
 			}
 		]
 	script(type="text/javascript", src="./js/map.min.js")
