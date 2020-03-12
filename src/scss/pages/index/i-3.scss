@@ -10,13 +10,14 @@
 		margin   : 0 auto;
 
 		h2 {
-			line-height: 1;
-			font-size  : 196px;
-			color      : #d3d3d3;
+			line-height   : 1;
+			font-size     : 50px;
+			color         : #d3d3d3;
+			text-transform: uppercase;
 		}
 
 		h3 {
-			font-size    : 54px;
+			font-size    : 24px;
 			color        : map-get($mau, main);
 			margin-top   : 20px;
 			margin-bottom: 10px;
@@ -196,14 +197,6 @@
 		.block-title {
 			max-width: unset;
 			margin   : 0 15px;
-
-			h2 {
-				font-size: 100px;
-			}
-
-			h3 {
-				font-size: 32px;
-			}
 		}
 
 		.slider-projects {
@@ -249,7 +242,7 @@
 
 		.block-title {
 			h2 {
-				font-size: 56px;
+				font-size: 36px;
 			}
 
 			h3 {

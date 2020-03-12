@@ -56,7 +56,6 @@ const sliderPartner = () => {
 
 const sliderFacilities = () => {
 	var swiper = new Swiper('.slider-facilities .swiper-container', {
-		loop: true,
 		speed: 1000,
 		autoplay: {
 			delay: 3000,
