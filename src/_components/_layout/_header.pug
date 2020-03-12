@@ -7,10 +7,12 @@ header
 		.container
 			.row.no-gutters.ai-c
 				ul.language
+					li.active
+						a(href="#")
+							img.ofcv(src="./assets/icons/vn.svg", alt="")
 					li
-						a(href="#") vn
-					li
-						a(href="#") en
+						a(href="#")
+							img.ofcv(src="./assets/icons/en.svg", alt="")
 				.list-nav.mx-at
 					.nav-item
 						a(href="gioi-thieu.html") giới thiệu
@@ -25,4 +27,10 @@ header
 					.nav-item
 						a(href="lien-he.html") liên hệ
 				.search
-					img(src="./assets/icons/search.svg", alt="", srcset="")
+					img(src="./assets/icons/search.svg", alt="")
+				.block-form-search
+					form(action="#")
+						.form-group
+							input.form-control(type="text" placeholder="Nhập để tìm kiếm")
+						.submit
+							button tìm

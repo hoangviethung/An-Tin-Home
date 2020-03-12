@@ -49,4 +49,10 @@ section.offices-detail
 						.list-image-detail
 							-for(i=1;i<6;i++)
 								.item
-									img.ofcv.lazyload.blur-up(data-src="./assets/images/news/0"+i+".png", alt="alt")
+									a(href="./assets/images/news/0"+i+".png" data-fancybox="list-images")
+										img.ofcv.lazyload.blur-up(data-src="./assets/images/news/0"+i+".png", alt="alt")
+						// DANH SÁCH HÌNH ẢNH POPUP - GẮN ĐÚNG LINK ẢNH + DATA FANCYBOX
+						.d-n
+							-for(i=1;i<6;i++)
+								a(href="./assets/images/news/0"+i+".png" data-fancybox="list-images")
+									img(src="./assets/images/news/0"+i+".png", alt="")

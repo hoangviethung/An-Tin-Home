@@ -1,12 +1,17 @@
 .index-4
 	.title-facilities
 		.block
-			a(href="#") cơ sở vật chất
+			a(href="javascript:void(0)") cơ sở vật chất
 	.slider-facilities
 		.swiper-container
 			.swiper-wrapper
 				-for(i=1;i<3;i++)
 					.swiper-slide
-						a(href="http://web4gsolutions.com/")
+						a(href="./assets/images/index/infrastructure-0"+i+".png" data-fancybox="list-images")
 							.img.ov-h
 								img.ofcv(src="./assets/images/index/infrastructure-0"+i+".png", alt="")
+		// DANH SÁCH HÌNH ẢNH POPUP - GẮN ĐÚNG LINK ẢNH + DATA FANCYBOX
+		.d-n
+			-for(i=1;i<3;i++)
+				a(href="./assets/images/index/infrastructure-0"+i+".png" data-fancybox="list-images")
+					img(src="./assets/images/index/infrastructure-0"+i+".png", alt="")

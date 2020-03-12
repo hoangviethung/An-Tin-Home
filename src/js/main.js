@@ -260,6 +260,12 @@ const scrollAbout = () => {
 	});
 }
 
+const showSearch = () => {
+	$('header .search').on('click', function() {
+		$('.block-form-search').slideToggle();
+	});
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Loading().then(() => {
 		new WOW().init();
@@ -279,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	menuMobile();
 	toggleMenuMobile();
 	sliderAboutPartner();
+	showSearch();
 	// TAB
 	const tabOfficesDetail = new Tab('.block-tab-offices-detail');
 });
