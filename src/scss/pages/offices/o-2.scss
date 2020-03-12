@@ -48,6 +48,12 @@
 					color         : #ffffff;
 					text-transform: uppercase;
 				}
+
+				&.active {
+					.link {
+						background: #1d733a;
+					}
+				}
 			}
 		}
 
