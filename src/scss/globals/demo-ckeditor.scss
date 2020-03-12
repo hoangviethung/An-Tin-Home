@@ -94,20 +94,5 @@
 		}
 	}
 
-	&.desc-item-list-image-detail {
-		display     : flex;
-		flex-wrap   : wrap;
-		margin-right: -10px;
-		margin-left : -10px;
 
-		.item {
-			-ms-flex        : 0 0 100%;
-			-webkit-box-flex: 0;
-			flex            : 0 0 30%;
-			max-width       : 30%;
-			padding-right   : 10px;
-			padding-left    : 10px;
-			margin-bottom   : 30px;
-		}
-	}
 }
