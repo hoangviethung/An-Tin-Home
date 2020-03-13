@@ -42,6 +42,22 @@
 	}
 
 	@media (max-width: 767.98px) {
+		.box-imgae {
+			figure {
+				height: 250px;
+
+				figcaption {
+					h3 {
+						font-size: 24px;
+					}
+
+					p {
+						font-size: 10px;
+					}
+				}
+			}
+		}
+
 		.box-content {
 			.description {
 				width  : 100%;
