@@ -1,0 +1,38 @@
+﻿@model MainProject.SBussiness.LandingPage.Models.News.TuyenDungViewModel
+@using MainProject.Core
+@using MainProject.Core.Enums
+<section class="news">
+    <div class="container">
+        <div class="block-title">
+            <h2 class="wow fadeInDown" data-wow-delay=".2s">TIN TỨC</h2>
+            <h3 class="wow fadeInUp" data-wow-delay=".2s">AN TÍN HOMES</h3>
+            <p class="lcl lcl-2">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+        </div>
+        <div class="list-news">
+            @foreach (var item in Model.Articles)
+            {
+                <div class="item-news wow fadeIn" data-wow-delay=".2s">
+                    <div class="img ov-h" data-getHeight><a href="tin-tuc-chi-tiet.html"><img class="ofcv" src="@item.ImageDefault" alt=""></a></div>
+                    <div class="content ov-h" data-setHeight="575.98">
+                        @Html.Raw(item.Title)
+                        @Html.Raw(item.Description)
+                    </div>
+                </div>
+            }
+
+
+        </div>
+        <ul class="pagination">
+            <li class="pagination-prev"><a href="#"><span><</span></a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li class="pagination-dot"><a href="#">...</a></li>
+            <li><a href="#">981</a></li>
+            <li class="pagination-next"><a href="#"><span>></span></a></li>
+        </ul>
+    </div>
+</section>
+
+

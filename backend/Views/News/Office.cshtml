@@ -1,0 +1,40 @@
+﻿@model MainProject.SBussiness.LandingPage.Models.News.OfficeViewModel
+@using MainProject.Core
+@using MainProject.Core.Enums
+<section class="offices">
+    <div class="block-title">
+        <h2 class="wow fadeInDown" data-wow-delay=".2s">Cho thuê văn phòng</h2>
+        <h3 class="wow fadeInUp" data-wow-delay=".2s">AN TÍN HOMES</h3>
+        <p class="lcl lcl-2">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+    </div>
+    <div class="container">
+        <div class="slider-projects">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    @foreach (var item in Model.Office)
+                    {
+                    <div class="swiper-slide">
+                        <div class="item-office">
+                            <a href="cho-thue-van-phong-chi-tiet.html">
+                                <figure>
+                                    <div class="img ov-h"><img class="ofcv" src="@item.ImageDefault"></div>
+                                    <figcaption>
+                                        <div class="project-info">
+                                            @Html.Raw(item.Title)
+                                            <a class="btn read-more main-color" href="cho-thue-van-phong-chi-tiet.html">xem thêm</a>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    }
+                    
+
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>
