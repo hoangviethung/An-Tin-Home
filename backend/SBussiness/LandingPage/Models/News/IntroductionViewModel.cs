@@ -10,11 +10,10 @@ namespace MainProject.SBussiness.LandingPage.Models.News
     public class IntroductionViewModel
     {
 
-        public Category Section1 { get; set; } = new Category
+        public Introduction Section1 { get; set; } = new Introduction
         {
-            SeName = "Giới thiệu",
             Title = "AN TÍN HOMES",
-            Description = "<div class=\"description\">" +
+            Content = "<div class=\"description\">" +
             "<div class=\"ckeditor desc-about-block-1\">" +
             "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> " +
             "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>" +
@@ -25,14 +24,13 @@ namespace MainProject.SBussiness.LandingPage.Models.News
             "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet," +
             " consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit," +
             " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>",
-            ImageDefault = "/content/resources/assets/images/about/about-2.png"
+            Image = "/content/resources/assets/images/about/about-2.png",
         };
-        public Category Section2 { get; set; } = new Category
+        public Introduction Section2 { get; set; } = new Introduction
         {
             Title = "<h3 class=\"wow fadeInUp\" data-wow-delay=\".2s\">mô tả</h3>",
-            MetaTitle = "<p>LOREM IPSUM DOLOR SIT AMET</p>",
-            ImageDefault = "/content/resources/assets/images/about/about-3_01.png",
-            Description = "<div class=\"description\"><div class=\"ckeditor desc-about-3-block-1\">" +
+            Image = "/content/resources/assets/images/about/about-3_01.png",
+            Content = "<div class=\"description\"><div class=\"ckeditor desc-about-3-block-1\">" +
             "<h3>MÔ TẢ CHUNG</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +
             "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, " +
             "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
@@ -44,90 +42,71 @@ namespace MainProject.SBussiness.LandingPage.Models.News
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>" +
             "</div></div>"
         };
-        public List<Category> Section3 { get; set; } = new List<Category>
+        public Introduction Section3 { get; set; } = new Introduction
         {
-            new Category
-            {
-                Title = "<div class=\"name\">LOREM IPSUM DOLOR SIT AMET, CONSECTETUER 2</div>",
-                MetaTitle = "<div class=\"numbers\">01</div>",
-                Description = "<ul class=\"list-info\">" +
-                "<li class=\"item\">" +
-                "<span>Lĩnh Vực Kinh Doanh: </span><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor</p></li>" +
-                "<li class=\"item\"><span>Website: </span><p>Lorem ipsum dolor sit amet</p></li>" +
-                "<li class=\"item\"><span>Tel: </span><p>0969912404</p></li>" +
-                "<li class=\"item\"><span>Fax: </span><p>1231234122</p></li>" +
-                "<li class=\"item\"><span>Email: </span><p>Lorem ipsum dolor sit ame</p></li></ul>",
-                ImageDefault = "/content/resources/assets/images/about/slider-partner-logo.png"
-            },
-            new Category
-            {
-                Title = "<div class=\"name\">LOREM IPSUM DOLOR SIT AMET, CONSECTETUER 2</div>",
-                MetaTitle = "<div class=\"numbers\">01</div>",
-                Description = "<ul class=\"list-info\">" +
-                "<li class=\"item\">" +
-                "<span>Lĩnh Vực Kinh Doanh: </span><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor</p></li>" +
-                "<li class=\"item\"><span>Website: </span><p>Lorem ipsum dolor sit amet</p></li>" +
-                "<li class=\"item\"><span>Tel: </span><p>0969912404</p></li>" +
-                "<li class=\"item\"><span>Fax: </span><p>1231234122</p></li>" +
-                "<li class=\"item\"><span>Email: </span><p>Lorem ipsum dolor sit ame</p></li></ul>",
-                ImageDefault = "/content/resources/assets/images/about/slider-partner-logo.png"
-            },
-            new Category
-            {
-                Title = "<div class=\"name\">LOREM IPSUM DOLOR SIT AMET, CONSECTETUER 2</div>",
-                MetaTitle = "<div class=\"numbers\">01</div>",
-                Description = "<ul class=\"list-info\">" +
-                "<li class=\"item\">" +
-                "<span>Lĩnh Vực Kinh Doanh: </span><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor</p></li>" +
-                "<li class=\"item\"><span>Website: </span><p>Lorem ipsum dolor sit amet</p></li>" +
-                "<li class=\"item\"><span>Tel: </span><p>0969912404</p></li>" +
-                "<li class=\"item\"><span>Fax: </span><p>1231234122</p></li>" +
-                "<li class=\"item\"><span>Email: </span><p>Lorem ipsum dolor sit ame</p></li></ul>",
-                ImageDefault = "/content/resources/assets/images/about/slider-partner-logo.png"
-            },
-            new Category
-            {
-                Title = "<div class=\"name\">LOREM IPSUM DOLOR SIT AMET, CONSECTETUER 2</div>",
-                MetaTitle = "<div class=\"numbers\">01</div>",
-                Description = "<ul class=\"list-info\">" +
-                "<li class=\"item\">" +
-                "<span>Lĩnh Vực Kinh Doanh: </span><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor</p></li>" +
-                "<li class=\"item\"><span>Website: </span><p>Lorem ipsum dolor sit amet</p></li>" +
-                "<li class=\"item\"><span>Tel: </span><p>0969912404</p></li>" +
-                "<li class=\"item\"><span>Fax: </span><p>1231234122</p></li>" +
-                "<li class=\"item\"><span>Email: </span><p>Lorem ipsum dolor sit ame</p></li></ul>",
-                ImageDefault = "/content/resources/assets/images/about/slider-partner-logo.png"
-            },
+            Title = "<h3 class=\"wow fadeInUp\" data-wow-delay=\".2s\">mô tả</h3>",
+            Image = "/content/resources/assets/images/about/about-3_01.png",
+            Content = "<div class=\"description\"><div class=\"ckeditor desc-about-3-block-1\">" +
+             "<h3>MÔ TẢ CHUNG</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +
+             "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, " +
+             "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>" +
+             "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>" +
+             "</div></div>"
         };
 
         public Introduction Section4 { get; set; } = new Introduction
         {
-            Title = "Title",
-            Content = "Content",
+            Title = "đối tác",
+            Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi tempora deleniti veniam eum impedit dolorem, nihil enim illo facilis ex nobis asperiores exercitationem voluptatum rem pariatur accusamus a, cumque delectus",
             Image = JsonHelper.Serialize(new List<Partner> {
                 new Partner
                 {
                     Name = "Name",
                     Bussiness = "Bussiness",
-                    Order = 1
+                    Order = 1,
+                    Image = "/content/resources/assets/images/about/slider-partner-logo.png",
+                    Website = "Lorem ipsum dolor sit amet",
+                    Tel = "0969912404",
+                    Email = "Lorem ipsum dolor sit amet",
+                    Fax = "0969912404"
                 },
                 new Partner
                 {
                     Name = "Name",
                     Bussiness = "Bussiness",
-                    Order = 2
+                    Order = 2,
+                    Image = "/content/resources/assets/images/about/slider-partner-logo.png",
+                    Website = "Lorem ipsum dolor sit amet",
+                    Tel = "0969912404",
+                    Email = "Lorem ipsum dolor sit amet",
+                    Fax = "0969912404"
                 },
                 new Partner
                 {
                     Name = "Name",
                     Bussiness = "Bussiness",
-                    Order = 3
+                    Order = 3,
+                    Image = "/content/resources/assets/images/about/slider-partner-logo.png",
+                    Website = "Lorem ipsum dolor sit amet",
+                    Tel = "0969912404",
+                    Email = "Lorem ipsum dolor sit amet",
+                    Fax = "0969912404"
                 },
                 new Partner
                 {
                     Name = "Name",
                     Bussiness = "Bussiness",
-                    Order = 4
+                    Order = 4,
+                    Image = "/content/resources/assets/images/about/slider-partner-logo.png",
+                    Website = "Lorem ipsum dolor sit amet",
+                    Tel = "0969912404",
+                    Email = "Lorem ipsum dolor sit amet",
+                    Fax = "0969912404"
                 },
             })
         };

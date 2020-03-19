@@ -23,14 +23,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5 box-left">
-                <div class="img oh-v" data-getHeight><img class="ofcv" src="@Model.Section1.ImageDefault" alt=""></div>
+                <div class="img oh-v" data-getHeight><img class="ofcv" src="@Model.Section1.Image" alt=""></div>
             </div>
             <div class="col-md-7 box-right" data-setHeight>
                 <div class="block-title">
-                    <h2 class="wow fadeInUp" data-wow-delay=".2s">@Model.Section1.SeName</h2>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">giới thiệu</h2>
                 </div>
                 <h3>@Model.Section1.Title</h3>
-                    @Html.Raw(Model.Section1.Description)
+                    @Html.Raw(Model.Section1.Content)
             </div>
         </div>
     </div>
@@ -39,27 +39,25 @@
     <div class="block row no-gutters">
         <div class="col-md-6 box-imgae">
             <figure class="ov-h" data-getHeight>
-                <img class="ofcv" src="@Model.Section2.ImageDefault" alt="">
+                <img class="ofcv" src="@Model.Section2.Image" alt="">
                 <figcaption>
                     @Html.Raw(Model.Section2.Title)
-                    @Html.Raw(Model.Section2.MetaTitle)
                 </figcaption>
             </figure>
         </div>
         <div class="col-md-6 box-content" data-setHeight="767.98">
-            @Html.Raw(Model.Section2.Description)
+            @Html.Raw(Model.Section2.Content)
         </div>
     </div>
     <div class="block row no-gutters">
         <div class="col-md-6 box-content" data-setHeight="767.98">
-            @Html.Raw(Model.Section3.Description)
+            @Html.Raw(Model.Section3.Content)
         </div>
         <div class="col-md-6 box-imgae">
             <figure class="ov-h" data-getHeight>
-                <img class="ofcv" src="@Model.Section3.ImageDefault" alt="">
+                <img class="ofcv" src="@Model.Section3.Image" alt="">
                 <figcaption>
-                    
-                    @Html.Raw(Model.Section3.MetaTitle)
+                    @Html.Raw(Model.Section3.Title)
                 </figcaption>
             </figure>
         </div>
@@ -93,19 +91,19 @@
                                         </li>
                                         <li class="item">
                                             <span>Website: </span>
-                                            <p>Lorem ipsum dolor sit amet</p>
+                                            <p>@item.Website</p>
                                         </li>
                                         <li class="item">
-                                            <span>@Html.GetResource(TempResourceKeyCollection.Intro_Bussiness): </span>
-                                            <p>0969912404</p>
+                                            <span>@Html.GetResource(TempResourceKeyCollection.Intro_Phone): </span>
+                                            <p>@item.Tel</p>
                                         </li>
                                         <li class="item">
                                             <span>Fax: </span>
-                                            <p>1231234122</p>
+                                            <p>@item.Fax</p>
                                         </li>
                                         <li class="item">
                                             <span>Email: </span>
-                                            <p>Lorem ipsum dolor sit ame</p>
+                                            <p>@item.Email</p>
                                         </li>
                                     </ul>
                                 </div>
