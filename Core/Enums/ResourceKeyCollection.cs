@@ -9,5 +9,8 @@ namespace MainProject.Core.Enums
         Error_Title,
         Error_Content,
         //CurrencyFormat,
+
+        // Home
+        Home_News
     }
 }

@@ -1,0 +1,81 @@
+﻿@using MainProject.Core
+@using MainProject.Core.Enums
+@model MainProject.SBussiness.LandingPage.Models.Contact.ContactViewModel
+    <section class="contact">
+        <div class="block-send-mail">
+            <div class="container">
+                <div class="block-title">
+                    <h2 class="wow fadeInDown" data-wow-delay=".2s">LIÊN HỆ</h2>
+                    <h3 class="wow fadeInUp" data-wow-delay=".2s">AN TÍN HOMES</h3>
+                    <p class="lcl lcl-2">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+                </div>
+                <div class="block-form">
+                    <form action="#" method="method">
+                        <div class="form-group">
+                            <input class="form-control name" type="text" placeholder="Nhập tên*">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control email" type="text" placeholder="Nhập email*">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control phone-number" type="text" placeholder="Nhập số điện thoại*">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control content" placeholder="Nhập nội dung *"></textarea>
+                        </div>
+                        <div class="block-recaptcha-submit">
+                            <div class="recaptcha"><img src="/content/resources/assets/recaptcha.gif" alt="" srcset=""></div>
+                            <div class="submit">
+                                <button class="btn read-more main-color" data-url="ajax">GỬI</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="block-address">
+            <div class="container">
+                <div class="block-title">
+                    <h2 class="wow fadeInDown" data-wow-delay=".2s">CHI NHÁNH</h2>
+                    <h3 class="wow fadeInUp" data-wow-delay=".2s">@Html.Raw(Model.Branch.OfficeName)</h3>
+                    <p class="lcl lcl-2">@Html.Raw(Model.Branch.Description)</p>
+                </div>
+                <ul class="list-info-company">
+                    <li class="item">
+                        @Html.Raw(Model.Branch.Address)
+                    </li>
+                    <li class="item">
+                        @Html.Raw(Model.Branch.Email)
+                    </li>
+                    <li class="item">
+                        @Html.Raw(Model.Branch.Fax)
+                    </li>
+                    <li class="item phone">
+                        @Html.Raw(Model.Branch.Phone)
+                    </li>
+                </ul>
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+@section scripts{
+    <script>
+			var locationsInput = [
+				{
+					lat: 10.1251,
+					lng: 11.125,
+					title: 'Home',
+					address: '134/8A, Trần Bá Giao, Q.Gò Vấp, Tp. HCM',
+					phone: '0914.633.990'
+				},
+				{
+					lat: 10.1251,
+					lng: 10.120,
+					title: 'Company',
+					address: '192/68, Nguyễn Oanh, Q.Gò Vấp, TP.HCM',
+					phone: '0905.010.115'
+				}
+			]
+		</script>
+		<script type="text/javascript" src="/content/resources/js/map.min.js"></script>
+    }

@@ -1,0 +1,38 @@
+﻿@model MainProject.SBussiness.LandingPage.Models.News.NewsDetailViewModel
+    @using MainProject.Core
+    @using MainProject.Core.Enums
+    <section class="news-detail">
+        <div class="container">
+            @Html.Raw(Model.Article.Title)
+            @Html.Raw(Model.Article.Description)
+            <ul class="social-media">
+                <li class="item"><a href="#"><img class="lazyload blur-up" data-src="./assets/icons/facebook.svg" alt=""></a></li>
+                <li class="item"><a href="#"><img class="lazyload blur-up" data-src="./assets/icons/mail.svg" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="news-others">
+        <div class="container">
+            <div class="slider-item-others">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model.Slideses)
+                        {
+                        <div class="swiper-slide">
+                            <a href="tin-tuc-chi-tiet.html">
+                                <figure class="ov-h">
+                                    <img class="ofcv" src="@item.ImageDefault" alt="alt">
+                                    <figcaption><a class="btn read-more main-color" href="tin-tuc-chi-tiet.html">xem</a></figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        }
+                        
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>

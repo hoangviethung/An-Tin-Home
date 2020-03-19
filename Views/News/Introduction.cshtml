@@ -1,0 +1,100 @@
+﻿@using MainProject.Core
+@using MainProject.Core.Enums
+@model MainProject.SBussiness.LandingPage.Models.News.IntroductionViewModel
+<section class="about-1">
+    <div class="container">
+        <ul class="list-menu">
+            <li class="item-menu">
+                <div class="link wow fadeInLeft" data-wow-delay=".2s" data-sroll=".about-2">giới thiệu</div>
+            </li>
+            <li class="item-menu">
+                <div class="link wow fadeInLeft" data-wow-delay=".4s" data-sroll=".about-3">mô tả</div>
+            </li>
+            <li class="item-menu">
+                <div class="link wow fadeInLeft" data-wow-delay=".6s" data-sroll=".about-3">giá cả</div>
+            </li>
+            <li class="item-menu">
+                <div class="link wow fadeInLeft" data-wow-delay=".8s" data-sroll=".about-4">đối tác</div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="about-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 box-left">
+                <div class="img oh-v" data-getHeight><img class="ofcv" src="@Model.Section1.ImageDefault" alt=""></div>
+            </div>
+            <div class="col-md-7 box-right" data-setHeight>
+                <div class="block-title">
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">@Model.Section1.SeName</h2>
+                </div>
+                <h3>@Model.Section1.Title</h3>
+                    @Html.Raw(Model.Section1.Description)
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-3">
+    <div class="block row no-gutters">
+        <div class="col-md-6 box-imgae">
+            <figure class="ov-h" data-getHeight>
+                <img class="ofcv" src="@Model.Section2.ImageDefault" alt="">
+                <figcaption>
+                    @Html.Raw(Model.Section2.Title)
+                    @Html.Raw(Model.Section2.MetaTitle)
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-6 box-content" data-setHeight="767.98">
+            @Html.Raw(Model.Section2.Description)
+        </div>
+    </div>
+    <div class="block row no-gutters">
+        <div class="col-md-6 box-content" data-setHeight="767.98">
+            @Html.Raw(Model.Section2.Description)
+        </div>
+        <div class="col-md-6 box-imgae">
+            <figure class="ov-h" data-getHeight>
+                <img class="ofcv" src="@Model.Section2.ImageDefault" alt="">
+                <figcaption>
+                    
+                    @Html.Raw(Model.Section2.MetaTitle)
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+<section class="about-4">
+    <div class="container">
+        <div class="block-title">
+            <h3 class="wow fadeInDown" data-wow-delay=".2s">đối tác</h3>
+            <p>LOREM IPSUM DOLOR SIT AMET</p>
+        </div>
+        <div class="description lcl lcl-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi tempora deleniti veniam eum impedit dolorem, nihil enim illo facilis ex nobis asperiores exercitationem voluptatum rem pariatur accusamus a, cumque delectus</div>
+    </div>
+    <div class="block-slider-about-partner"> 
+        <div class="container">
+            <div class="slider-about-partner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model.Section3)
+                        {
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="logo"><img class="ofcv" src="@item.ImageDefault" alt=""></div>
+                                @Html.Raw(item.Title)
+                                @Html.Raw(item.MetaTitle)
+                                @Html.Raw(item.Description)
+                            </div>
+                        </div>
+                        }
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+</section>
