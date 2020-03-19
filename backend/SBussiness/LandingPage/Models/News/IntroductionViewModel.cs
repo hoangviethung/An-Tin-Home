@@ -1,4 +1,5 @@
 ﻿using MainProject.Core;
+using MainProject.Framework.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -97,6 +98,38 @@ namespace MainProject.SBussiness.LandingPage.Models.News
                 "<li class=\"item\"><span>Email: </span><p>Lorem ipsum dolor sit ame</p></li></ul>",
                 ImageDefault = "/content/resources/assets/images/about/slider-partner-logo.png"
             },
+        };
+
+        public Introduction Section4 { get; set; } = new Introduction
+        {
+            Title = "Title",
+            Content = "Content",
+            Image = JsonHelper.Serialize(new List<Partner> {
+                new Partner
+                {
+                    Name = "Name",
+                    Bussiness = "Bussiness",
+                    Order = 1
+                },
+                new Partner
+                {
+                    Name = "Name",
+                    Bussiness = "Bussiness",
+                    Order = 2
+                },
+                new Partner
+                {
+                    Name = "Name",
+                    Bussiness = "Bussiness",
+                    Order = 3
+                },
+                new Partner
+                {
+                    Name = "Name",
+                    Bussiness = "Bussiness",
+                    Order = 4
+                },
+            })
         };
 }
 }

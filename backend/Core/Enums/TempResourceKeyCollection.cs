@@ -2,7 +2,7 @@
 
 namespace MainProject.Core.Enums
 {
-    public enum  ResourceKeyCollection 
+    public enum  TempResourceKeyCollection 
     {
         // Contact
         Contact_Success,
@@ -11,6 +11,10 @@ namespace MainProject.Core.Enums
         //CurrencyFormat,
 
         // Home
-        Home_News
+        Home_News,
+
+        // Introduction
+        Intro_Bussiness,
+        Intro_Phone,
     }
 }
