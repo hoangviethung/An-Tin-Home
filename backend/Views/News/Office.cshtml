@@ -1,17 +1,17 @@
 ﻿@using MainProject.Core
 @using MainProject.Core.Enums
-@model MainProject.SBussiness.LandingPage.Models.News.OfficeViewModel
+@model MainProject.SBussiness.LandingPage.Models.News.NewsViewModel
 
 <section class="offices">
     <div class="block-title">
-        <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.OfficeCategory.Title</h2>
-        @Html.Raw(Model.OfficeCategory.Description)
+        <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.Category.Title</h2>
+        @Html.Raw(Model.Category.Description)
     </div>
     <div class="container">
         <div class="slider-projects">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach (var item in Model.Offices)
+                    @foreach (var item in Model.Articles)
                     {
                         <div class="swiper-slide">
                             <div class="item-office">
@@ -22,7 +22,7 @@
                                             <div class="project-info">
                                                 @Html.Raw(item.Title)
                                                 <a class="btn read-more main-color" href="@item.GetUrl()">
-                                                    @Html.GetResource(TempResourceKeyCollection.Read_More)
+                                                    @Html.GetResource(ResourceKeyCollection.Read_More)
                                                 </a>
                                             </div>
                                         </figcaption>

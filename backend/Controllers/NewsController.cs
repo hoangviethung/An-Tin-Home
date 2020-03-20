@@ -25,11 +25,11 @@ namespace MainProject.Controllers
         //GET: OFFICE
         public ActionResult Office()
         {
-            return View(new OfficeViewModel());
+            return View(new NewsViewModel());
         }
         public ActionResult OfficeDetail()
         {
-            return View(new OfficeDetailViewModel());
+            return View(new NewsDetailViewModel());
         }
 
     }
