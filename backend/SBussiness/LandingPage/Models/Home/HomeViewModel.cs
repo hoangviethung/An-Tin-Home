@@ -12,6 +12,10 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
         {
             Title = "HomePage"
         };
+        public Category IntroCategory { get; set; } = new Category
+        {
+            
+        };
         public Introduction Section1 { get; set; } = new Introduction
         {
             Title = "Giới thiệu",

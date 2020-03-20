@@ -1,4 +1,6 @@
-﻿@model MainProject.SBussiness.LandingPage.Models.Home.FooterViewModel
+﻿@using MainProject.Core.Enums
+@model MainProject.SBussiness.LandingPage.Models.Home.FooterViewModel
+
 <div class="index-5">
     <div class="container">
         <div class="slider-partner">
@@ -8,7 +10,6 @@
                     {
                         <div class="swiper-slide"><a href="#"><img src="@item.Image" alt=""></a></div>
                     }
-            
                 </div>
             </div>
         </div>
@@ -19,18 +20,20 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="logo"><img class="lazyload blur-up" data-src="/content/resources/assets/logo-white.png" alt=""></div>
-                <ul class="list-info-footer">
-                    <li>@Model.Branch.Address</li>
-                    <li>@Model.Branch.Phone </li>
-                    <li>@Model.Branch.Fax</li>
-                    <li>@Model.Branch.Email</li>
-                </ul>
+                @if (Model.Branch != null)
+                {
+                    <ul class="list-info-footer">
+                        <li>@Model.Branch.Address</li>
+                        <li>@Model.Branch.Phone </li>
+                        <li>@Model.Branch.Fax</li>
+                        <li>@Model.Branch.Email</li>
+                    </ul>
+                }
             </div>
             <div class="col-lg-4">
-                <div class="title-footer">ĐĂNG KÝ NHẬN MAIL</div>
+                <div class="title-footer">@Html.GetResource(TempResourceKeyCollection.Subscribe_Title)</div>
                 <div class="block-form">
                     @Html.Partial("_Subscribe", new MainProject.SBussiness.LandingPage.Models.Home.SubscribeModel())
-
                 </div>
             </div>
             <div class="col-lg-4">

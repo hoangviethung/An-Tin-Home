@@ -1,6 +1,7 @@
 ﻿@using MainProject.Core
 @using MainProject.Core.Enums
 @model MainProject.SBussiness.LandingPage.Models.Contact.ContactViewModel
+
 <section class="contact">
     <div class="block-send-mail">
         <div class="container">
@@ -9,7 +10,7 @@
                 @Html.Raw(Model.Category.Description)
             </div>
             <div class="block-form">
-                @Html.Partial("_FormContact", new MainProject.SBussiness.LandingPage.Models.Contact.FormContactViewModel())
+                @Html.Partial("_Form", new MainProject.SBussiness.LandingPage.Models.Contact.ContactManageViewModel())
             </div>
         </div>
     </div>

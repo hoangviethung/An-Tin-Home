@@ -1,20 +1,21 @@
 ﻿@using MainProject.Core
 @using MainProject.Core.Enums
 @model MainProject.SBussiness.LandingPage.Models.News.IntroductionViewModel
+
 <section class="about-1">
     <div class="container">
         <ul class="list-menu">
             <li class="item-menu">
-                <div class="link wow fadeInLeft" data-wow-delay=".2s" data-sroll=".about-2">giới thiệu</div>
+                <div class="link wow fadeInLeft" data-wow-delay=".2s" data-sroll=".about-2">@Model.Section1.Title</div>
             </li>
             <li class="item-menu">
-                <div class="link wow fadeInLeft" data-wow-delay=".4s" data-sroll=".about-3">mô tả</div>
+                <div class="link wow fadeInLeft" data-wow-delay=".4s" data-sroll=".about-3">@Model.Section2.Title</div>
             </li>
             <li class="item-menu">
-                <div class="link wow fadeInLeft" data-wow-delay=".6s" data-sroll=".about-3">giá cả</div>
+                <div class="link wow fadeInLeft" data-wow-delay=".6s" data-sroll=".about-3">@Model.Section3.Title</div>
             </li>
             <li class="item-menu">
-                <div class="link wow fadeInLeft" data-wow-delay=".8s" data-sroll=".about-4">đối tác</div>
+                <div class="link wow fadeInLeft" data-wow-delay=".8s" data-sroll=".about-4">@Model.Section4.Title</div>
             </li>
         </ul>
     </div>
@@ -27,10 +28,9 @@
             </div>
             <div class="col-md-7 box-right" data-setHeight>
                 <div class="block-title">
-                    <h2 class="wow fadeInUp" data-wow-delay=".2s">giới thiệu</h2>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">@Model.Section1.Title</h2>
                 </div>
-                <h3>@Model.Section1.Title</h3>
-                    @Html.Raw(Model.Section1.Content)
+                @Html.Raw(Model.Section1.Content)
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@
             @Html.Raw(Model.Section4.Content)
         </div>
     </div>
-    <div class="block-slider-about-partner"> 
+    <div class="block-slider-about-partner">
         <div class="container">
             <div class="slider-about-partner">
                 <div class="swiper-container">

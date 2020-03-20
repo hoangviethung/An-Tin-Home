@@ -6,11 +6,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 content-about-us">
-
                 <h2 class="wow fadeInLeft" data-wow-delay=".2s">@Model.Section1.Title</h2>
                 <div class="content">
                     @Html.Raw(Model.Section1.Content)
-                    <a class="btn read-more main-color" href="gioi-thieu.html">xem thêm</a>
+                    <a class="btn read-more main-color" href="@(Model.IntroCategory != null ? Model.IntroCategory.GetPrefixUrl() : "")">
+                        @Html.GetResource(TempResourceKeyCollection.Read_More)
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6 img-about-us">
@@ -22,76 +23,93 @@
         <div class="number-of-page dekstop wow fadeInRight" data-wow-delay=".2s"> <span>01.</span></div>
     </div>
 </section>
-<section class="index-2">
-    <div class="row no-gutters">
-        <div class="news-images col-lg-3">
-            <figure class="ov-h">
-                <img class="ofcv lazyload blur-up" data-src="@Model.NewsCategory.ImageDefault" alt="" srcset="">
-                <figcaption class="number-of-page">
-                    <h2>02.</h2><a class="wow fadeInDown" data-wow-delay=".2s" href="tin-tuc.html">@Model.NewsCategory.Title</a>
-                </figcaption>
-            </figure>
-        </div>
-        <div class="block-list-new col-lg-9">
-            <div class="list-item-news">
-                @foreach (var item in Model.Newses)
-                {
-                    <div class="item-news">
-                        <a href="tin-tuc-chi-tiet.html">
-                            <h2 class="lcl lcl-2">@item.Title</h2>
-                            <time>@item.Order.ToString("dd/MM/yyyy")</time>
-                            <div class="desc">
-                                <p>@item.Description</p>
-                            </div>
-                        </a>
-                    </div>
-                }
-                <div class="block-view-more"><a class="btn read-more white" href="tin-tuc.html">xem thêm</a></div>
+@if (Model.NewsCategory != null)
+{
+    <section class="index-2">
+        <div class="row no-gutters">
+            <div class="news-images col-lg-3">
+                <figure class="ov-h">
+                    <img class="ofcv lazyload blur-up" data-src="@Model.NewsCategory.ImageDefault" alt="" srcset="">
+                    <figcaption class="number-of-page">
+                        <h2>02.</h2><a class="wow fadeInDown" data-wow-delay=".2s" href="tin-tuc.html">@Model.NewsCategory.Title</a>
+                    </figcaption>
+                </figure>
             </div>
-        </div>
-    </div>
-</section>
-<section class="index-3">
-    <div class="block-intro">
-        <div class="block-title">
-            <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.OfficeCategory.Title</h2>
-            @Html.Raw(Model.OfficeCategory.Description)
-        </div>
-        <div class="number-of-page">
-            <h4>03.</h4><a class="wow fadeInDown" data-wow-delay=".2s" href="#">Văn Phòng</a>
-        </div>
-    </div>
-    <div class="container">
-        <div class="slider-projects">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    @foreach (var item in Model.Offices)
+            <div class="block-list-new col-lg-9">
+                <div class="list-item-news">
+                    @foreach (var item in Model.Newses)
                     {
-                        <div class="swiper-slide">
-                            <div class="item-project">
-                                <a href="cho-thue-van-phong-chi-tiet.html">
-                                    <figure class="ov-h">
-                                        <img class="ofcv" src="@item.ImageDefault">
-                                        <figcaption>
-                                            <div class="project-info">
-                                                <div class="name">@item.Title</div>
-                                                <div class="desc lcl lcl-3">@item.Description</div><a class="btn read-more main-color" href="cho-thue-van-phong-chi-tiet.html">xem thêm</a>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
+                        <div class="item-news">
+                            <a href="tin-tuc-chi-tiet.html">
+                                <h2 class="lcl lcl-2">@item.Title</h2>
+                                <time>@item.Order.ToString("dd/MM/yyyy")</time>
+                                <div class="desc">
+                                    <p>@item.Description</p>
+                                </div>
+                            </a>
                         </div>
                     }
-
+                    <div class="block-view-more">
+                        <a class="btn read-more white" href="@Model.NewsCategory.GetPrefixUrl()">
+                            @Html.GetResource(TempResourceKeyCollection.Read_More)
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
-        <div class="block-view-more ta-c"><a class="btn read-more main-color" href="cho-thue-van-phong.html">xem thêm</a></div>
-    </div>
-</section>
+    </section>
+}
+@if (Model.OfficeCategory != null)
+{
+    <section class="index-3">
+        <div class="block-intro">
+            <div class="block-title">
+                <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.OfficeCategory.Title</h2>
+                @Html.Raw(Model.OfficeCategory.Description)
+            </div>
+            <div class="number-of-page">
+                <h4>03.</h4><a class="wow fadeInDown" data-wow-delay=".2s" href="#">@Model.OfficeCategory.Title</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="slider-projects">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model.Offices)
+                        {
+                            <div class="swiper-slide">
+                                <div class="item-project">
+                                    <a href="@item.GetUrl()">
+                                        <figure class="ov-h">
+                                            <img class="ofcv" src="@item.ImageDefault">
+                                            <figcaption>
+                                                <div class="project-info">
+                                                    <div class="name">@item.Title</div>
+                                                    <div class="desc lcl lcl-3">@item.Description</div>
+                                                    <a class="btn read-more main-color" href="@item.GetUrl()">
+                                                        @Html.GetResource(TempResourceKeyCollection.Read_More)
+                                                    </a>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="block-view-more ta-c">
+                <a class="btn read-more main-color" href="@Model.OfficeCategory.GetPrefixUrl()">
+                    @Html.GetResource(TempResourceKeyCollection.Read_More)
+                </a>
+            </div>
+        </div>
+    </section>
+}
 <div class="index-4">
     <a href="/content/resources/assets/images/index/infrastructure-01.png" data-fancybox="list-images">
         <div class="title-facilities">
@@ -108,7 +126,8 @@
                 {
                     <div class="swiper-slide">
                         <div class="img ov-h">
-                            <img class="ofcv" src="@item.ResourcePath" alt=""></div>
+                            <img class="ofcv" src="@item.ResourcePath" alt="">
+                        </div>
                     </div>
                 }
             </div>
@@ -116,13 +135,12 @@
         <!-- DANH SÁCH HÌNH ẢNH POPUP - GẮN ĐÚNG LINK ẢNH + DATA FANCYBOX-->
         <div class="d-n">
             @foreach (var item in JsonHelper.Deserialize<List<Image>>(Model.Section2.Image) ?? new List<Image>())
-            { 
+            {
                 <a href="@item.ResourcePath" data-fancybox="list-images">
                     <img src="@item.ResourcePath" alt="">
                 </a>
             }
-         
-            </div>
+        </div>
     </div>
 </div>
 <div class="index-page" id="js-page-verify" hidden></div>

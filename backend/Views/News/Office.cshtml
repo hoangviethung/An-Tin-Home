@@ -1,6 +1,7 @@
-﻿@model MainProject.SBussiness.LandingPage.Models.News.OfficeViewModel
-@using MainProject.Core
+﻿@using MainProject.Core
 @using MainProject.Core.Enums
+@model MainProject.SBussiness.LandingPage.Models.News.OfficeViewModel
+
 <section class="offices">
     <div class="block-title">
         <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.OfficeCategory.Title</h2>
@@ -12,24 +13,24 @@
                 <div class="swiper-wrapper">
                     @foreach (var item in Model.Offices)
                     {
-                    <div class="swiper-slide">
-                        <div class="item-office">
-                            <a href="cho-thue-van-phong-chi-tiet.html">
-                                <figure>
-                                    <div class="img ov-h"><img class="ofcv" src="@item.ImageDefault"></div>
-                                    <figcaption>
-                                        <div class="project-info">
-                                            @Html.Raw(item.Title)
-                                            <a class="btn read-more main-color" href="cho-thue-van-phong-chi-tiet.html">xem thêm</a>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </a>
+                        <div class="swiper-slide">
+                            <div class="item-office">
+                                <a href="@item.GetUrl()">
+                                    <figure>
+                                        <div class="img ov-h"><img class="ofcv" src="@item.ImageDefault"></div>
+                                        <figcaption>
+                                            <div class="project-info">
+                                                @Html.Raw(item.Title)
+                                                <a class="btn read-more main-color" href="@item.GetUrl()">
+                                                    @Html.GetResource(TempResourceKeyCollection.Read_More)
+                                                </a>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
                         </div>
-                    </div>
                     }
-                    
-
                 </div>
             </div>
             <div class="swiper-button-prev"></div>

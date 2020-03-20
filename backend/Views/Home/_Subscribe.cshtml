@@ -3,14 +3,12 @@
 
 @using (Ajax.BeginForm("Subscribe", "Home", new AjaxOptions() { HttpMethod = "POST", OnSuccess = "subscribeSuccess" }))
 {
-<form action="#">
     <div class="form-group">
-         @Html.TextBoxFor(d => d.Email, new {@class="form-control email", placeholder = "Enter your e-mail" })
+        @Html.TextBoxFor(d => d.Email, new { @class = "form-control email", placeholder = Html.GetResource(TempResourceKeyCollection.Subscribe_Input) })
     </div>
     <div class="form-group">
-        <button data-url="ajax">@Html.GetResource(TempResourceKeyCollection.Subscribe_button)</button>
+        <button data-url="ajax">@Html.GetResource(TempResourceKeyCollection.Subscribe_Button)</button>
     </div>
-</form>
 }
 
 
