@@ -12,9 +12,12 @@ namespace MainProject.Core.Enums
 
         // Home
         Home_News,
+        Subscribe_button,
 
         // Introduction
         Intro_Bussiness,
         Intro_Phone,
+        // News
+        News,
     }
 }

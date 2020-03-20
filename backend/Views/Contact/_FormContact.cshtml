@@ -1,0 +1,26 @@
+﻿@using MainProject.Core.Enums
+@model MainProject.SBussiness.LandingPage.Models.Contact.FormContactViewModel
+
+@using (Ajax.BeginForm("FormContactViewModel", "Contact", new AjaxOptions() { HttpMethod = "POST", OnSuccess = "subscribeSuccess" }))
+{
+    <form action="#">
+        <div class="form-group">
+            @Html.TextBoxFor(d => d.Name, new { @class = "form-control name", placeholder = "Nhập tên*" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(d => d.Email, new { @class = "form-control email", placeholder = "Nhập email*" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(d => d.Phone, new { @class = "orm-control phone-number", placeholder = "Nhập Số điện thoại*" })
+        </div>
+        <div class="form-group">
+            @Html.TextArea("Content", new { @class = "form-control content", placeholder = "Nhập email*" })
+        </div>
+        <div class="block-recaptcha-submit">
+            <div class="recaptcha"><img src="/content/resources/assets/recaptcha.gif" alt="" srcset=""></div>
+            <div class="submit">
+                <button data-url="ajax">@Html.GetResource(TempResourceKeyCollection.Contact_Success)</button>
+            </div>
+        </div>
+    </form>
+}

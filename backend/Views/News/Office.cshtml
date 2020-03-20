@@ -3,15 +3,14 @@
 @using MainProject.Core.Enums
 <section class="offices">
     <div class="block-title">
-        <h2 class="wow fadeInDown" data-wow-delay=".2s">Cho thuê văn phòng</h2>
-        <h3 class="wow fadeInUp" data-wow-delay=".2s">AN TÍN HOMES</h3>
-        <p class="lcl lcl-2">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+        <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.OfficeCategory.Title</h2>
+        @Html.Raw(Model.OfficeCategory.Description)
     </div>
     <div class="container">
         <div class="slider-projects">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach (var item in Model.Office)
+                    @foreach (var item in Model.Offices)
                     {
                     <div class="swiper-slide">
                         <div class="item-office">

@@ -1,0 +1,16 @@
+﻿@using MainProject.Core.Enums
+@model MainProject.SBussiness.LandingPage.Models.Home.SubscribeModel
+
+@using (Ajax.BeginForm("Subscribe", "Home", new AjaxOptions() { HttpMethod = "POST", OnSuccess = "subscribeSuccess" }))
+{
+<form action="#">
+    <div class="form-group">
+         @Html.TextBoxFor(d => d.Email, new {@class="form-control email", placeholder = "Enter your e-mail" })
+    </div>
+    <div class="form-group">
+        <button data-url="ajax">@Html.GetResource(TempResourceKeyCollection.Subscribe_button)</button>
+    </div>
+</form>
+}
+
+

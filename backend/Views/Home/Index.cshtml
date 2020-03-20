@@ -9,13 +9,13 @@
 
                 <h2 class="wow fadeInLeft" data-wow-delay=".2s">@Model.Section1.Title</h2>
                 <div class="content">
-                    @Model.Section1.Content
+                    @Html.Raw(Model.Section1.Content)
                     <a class="btn read-more main-color" href="gioi-thieu.html">xem thêm</a>
                 </div>
             </div>
             <div class="col-lg-6 img-about-us">
                 <div class="img ov-h">
-                    <img class="ofcv lazyload blur-up" data-src="/content/resources/assets/images/index/index-1-about.png" alt="GIỚI THIỆU" srcset="">
+                    <img class="ofcv lazyload blur-up" data-src="@Model.Section1.Image" alt="GIỚI THIỆU" srcset="">
                 </div>
             </div>
         </div>
@@ -26,9 +26,9 @@
     <div class="row no-gutters">
         <div class="news-images col-lg-3">
             <figure class="ov-h">
-                <img class="ofcv lazyload blur-up" data-src="/content/resources/assets/images/index/newhome-tower.png" alt="" srcset="">
+                <img class="ofcv lazyload blur-up" data-src="@Model.NewsCategory.ImageDefault" alt="" srcset="">
                 <figcaption class="number-of-page">
-                    <h2>02.</h2><a class="wow fadeInDown" data-wow-delay=".2s" href="tin-tuc.html">TIN TỨC</a>
+                    <h2>02.</h2><a class="wow fadeInDown" data-wow-delay=".2s" href="tin-tuc.html">@Model.NewsCategory.Title</a>
                 </figcaption>
             </figure>
         </div>
@@ -54,19 +54,18 @@
 <section class="index-3">
     <div class="block-intro">
         <div class="block-title">
-            <h2 class="wow fadeInDown" data-wow-delay=".2s">cho thuê văn phòng</h2>
-            <h3 class="wow fadeInUp" data-wow-delay=".2s">AN TÍN HOMES</h3>
-            <p class="lcl lcl-2">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+            <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.OfficeCategory.Title</h2>
+            @Html.Raw(Model.OfficeCategory.Description)
         </div>
         <div class="number-of-page">
-            <h4>03.</h4><a class="wow fadeInDown" data-wow-delay=".2s" href="#">Văn phòng</a>
+            <h4>03.</h4><a class="wow fadeInDown" data-wow-delay=".2s" href="#">Văn Phòng</a>
         </div>
     </div>
     <div class="container">
         <div class="slider-projects">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach (var item in Model.Opices)
+                    @foreach (var item in Model.Offices)
                     {
                         <div class="swiper-slide">
                             <div class="item-project">

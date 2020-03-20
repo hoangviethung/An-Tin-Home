@@ -41,6 +41,11 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
                 }
             })
         };
+        public Category NewsCategory { get; set; } = new Category
+        {
+            Title = "Tin Tức",
+            ImageDefault = "/content/resources/assets/images/index/newhome-tower.png"
+        };
         public List<Article> Newses { get; set; } = new List<Article>
         {
             new Article
@@ -72,11 +77,18 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
             }
 
         };
-        public List<Article> Opices { get; set; } = new List<Article>
+        public Category OfficeCategory { get; set; } = new Category
         {
+            Title = "CHO THUÊ VĂN PHÒNG",
+            Description = "<h3 class=\"wow fadeInUp\" data-wow-delay=\".2s\">AN TÍN HOMES</h3>" +
+                            "<p class=\"lcl lcl-2\">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. " +
+                            "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>"
+        };
+        public List<Article> Offices { get; set; } = new List<Article>
+        {   
                new Article
                {
-                    Title = "CHO THUÊ VĂN PHÒNG TẠI TP.HCM",
+                   Title = "CHO THUÊ VĂN PHÒNG TẠI TP.HCM",
                     Description = "Aliquam lorem ante, " +
                    "dapibus in, viverra quis, feugiat a, tellus. " +
                    "Phasellus viverra nulla ut metusvarius laoreet. " +
@@ -139,9 +151,48 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
     {
         public Branch Branch { get; set; } = new Branch
         {
-            OfficeName = "Văn phòng chính",
-            Address = "192/68 Nguyễn Oanh, ....",
-            AddressMap = "iframe or some format text show on map"
+            Address = "Add: Tòa nhà H3, 384 Hoàng Diệu, Quận 4, TP.Hồ Chí Minh",
+            Phone = " Phone: 028. 38266766",
+            Fax = "Fax: 028. 38266766",
+            Email = "Email: info@antingroup.vn"
+        };
+        public List<Partner> Partner { get; set; } = new List<Partner>
+        {
+            new Partner
+            {
+                Name = "Partner 1",
+                Image = "/content/resources/assets/images/partner/01.png"
+            },
+            new Partner
+            {
+                Name = "Partner 2",
+                Image = "/content/resources/assets/images/partner/02.png"
+            },
+            new Partner
+            {
+                Name = "Partner 3",
+                Image = "/content/resources/assets/images/partner/03.png"
+            },
+            new Partner
+            {
+                Name = "Partner 4",
+                Image = "/content/resources/assets/images/partner/04.png"
+            },
+            new Partner
+            {
+                Name = "Partner 5",
+                Image = "/content/resources/assets/images/partner/05.png"
+            },
+            new Partner
+            {
+                Name = "Partner 6",
+                Image = "/content/resources/assets/images/partner/06.png"
+            },
+            new Partner
+            {
+                Name = "Partner 7",
+                Image = "/content/resources/assets/images/partner/07.png"
+            },
         };
     }
 

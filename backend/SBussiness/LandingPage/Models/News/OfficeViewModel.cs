@@ -8,7 +8,14 @@ namespace MainProject.SBussiness.LandingPage.Models.News
 {
     public class OfficeViewModel
     {
-        public List<Article> Office { get; set; } = new List<Article>
+        public Category OfficeCategory { get; set; } = new Category
+        {
+            Title = "CHO THUÊ VĂN PHÒNG",
+            Description = "<h3 class=\"wow fadeInUp\" data-wow-delay=\".2s\">AN TÍN HOMES</h3>" +
+            "<p class=\"lcl lcl-2\">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. " +
+            "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>"
+        };
+        public List<Article> Offices { get; set; } = new List<Article>
         {
             new Article
             {

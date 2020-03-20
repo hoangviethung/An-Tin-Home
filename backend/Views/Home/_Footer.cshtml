@@ -4,13 +4,11 @@
         <div class="slider-partner">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="#"><img src="/content/resources/assets/images/partner/01.png" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/content/resources/assets/images/partner/02.png" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/content/resources/assets/images/partner/03.png" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/content/resources/assets/images/partner/04.png" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/content/resources/assets/images/partner/05.png" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/content/resources/assets/images/partner/06.png" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/content/resources/assets/images/partner/07.png" alt=""></a></div>
+                    @foreach (var item in Model.Partner)
+                    {
+                        <div class="swiper-slide"><a href="#"><img src="@item.Image" alt=""></a></div>
+                    }
+            
                 </div>
             </div>
         </div>
@@ -22,23 +20,17 @@
             <div class="col-lg-4">
                 <div class="logo"><img class="lazyload blur-up" data-src="/content/resources/assets/logo-white.png" alt=""></div>
                 <ul class="list-info-footer">
-                    <li>Add: Tòa nhà H3, 384 Hoàng Diệu, Quận 4, TP.Hồ Chí Minh</li>
-                    <li>Phone: 028. 38266766 </li>
-                    <li>Fax: 028. 38266766</li>
-                    <li>Email: info@antingroup.vn</li>
+                    <li>@Model.Branch.Address</li>
+                    <li>@Model.Branch.Phone </li>
+                    <li>@Model.Branch.Fax</li>
+                    <li>@Model.Branch.Email</li>
                 </ul>
             </div>
             <div class="col-lg-4">
                 <div class="title-footer">ĐĂNG KÝ NHẬN MAIL</div>
                 <div class="block-form">
-                    <form action="#">
-                        <div class="form-group">
-                            <input class="form-control email" type="text" placeholder="Email của bạn">
-                        </div>
-                        <div class="form-group">
-                            <button data-url="ajax">ĐĂNG KÍ NGAY</button>
-                        </div>
-                    </form>
+                    @Html.Partial("_Subscribe", new MainProject.SBussiness.LandingPage.Models.Home.SubscribeModel())
+
                 </div>
             </div>
             <div class="col-lg-4">

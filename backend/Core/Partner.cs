@@ -24,5 +24,6 @@ namespace MainProject.Core
         public string Fax { get; set; }
 
         public string Email { get; set; }
+        public string Intro_Phone { get; internal set; }
     }
 }

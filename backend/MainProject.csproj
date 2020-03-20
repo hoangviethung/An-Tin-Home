@@ -133,14 +133,13 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Contact\ContactViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\Contact\FormContactViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Home\HomeViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\IntroductionViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\NewsDetailViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\NewsViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\OfficeDetailViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\OfficeViewModel.cs" />
-    <Compile Include="SBussiness\LandingPage\Models\News\TuyenDungDetailViewModel.cs" />
-    <Compile Include="SBussiness\LandingPage\Models\News\TuyenDungViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\MainProject.Core.dll" />
@@ -159,6 +158,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include=".editorconfig" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -200,9 +200,9 @@
     <Content Include="Views\News\Introduction.cshtml" />
     <Content Include="Views\News\Office.cshtml" />
     <Content Include="Views\News\OfficeDetail.cshtml" />
-    <Content Include="Views\News\TuyenDung.cshtml" />
-    <Content Include="Views\News\TuyenDungDetail.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Home\_Subscribe.cshtml" />
+    <Content Include="Views\Contact\_FormContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\resources\" />
