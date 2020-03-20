@@ -1,4 +1,5 @@
-﻿@using MainProject.Core.Enums
+﻿@using MainProject.Core
+@using MainProject.Core.Enums
 @model MainProject.SBussiness.LandingPage.Models.Home.FooterViewModel
 
 <div class="index-5">
@@ -6,9 +7,9 @@
         <div class="slider-partner">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach (var item in Model.Partner)
+                    @foreach (var item in JsonHelper.Deserialize<List<Image>>(Model.Partner.Image) ?? new List<Image>())
                     {
-                        <div class="swiper-slide"><a href="#"><img src="@item.Image" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="@item.ResourcePath" alt="@item.Alt"></a></div>
                     }
                 </div>
             </div>

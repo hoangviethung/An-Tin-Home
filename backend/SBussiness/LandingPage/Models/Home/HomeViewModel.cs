@@ -14,7 +14,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
         };
         public Category IntroCategory { get; set; } = new Category
         {
-            
+
         };
         public Introduction Section1 { get; set; } = new Introduction
         {
@@ -30,7 +30,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
         {
             Title = "Cơ Sở Vật Chất",
             Content = "nhấn để xem",
-            Image = JsonHelper.Serialize(new List<Image> { 
+            Image = JsonHelper.Serialize(new List<Image> {
                 new Image
                 {
                    ResourcePath  = "/content/resources/assets/images/index/infrastructure-01.png"
@@ -89,7 +89,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
                             "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>"
         };
         public List<Article> Offices { get; set; } = new List<Article>
-        {   
+        {
                new Article
                {
                    Title = "CHO THUÊ VĂN PHÒNG TẠI TP.HCM",
@@ -160,43 +160,46 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
             Fax = "Fax: 028. 38266766",
             Email = "Email: info@antingroup.vn"
         };
-        public List<Partner> Partner { get; set; } = new List<Partner>
+        public Introduction Partner { get; set; } = new Introduction
         {
-            new Partner
+            Image = JsonHelper.Serialize(new List<Image>
             {
-                Name = "Partner 1",
-                Image = "/content/resources/assets/images/partner/01.png"
-            },
-            new Partner
-            {
-                Name = "Partner 2",
-                Image = "/content/resources/assets/images/partner/02.png"
-            },
-            new Partner
-            {
-                Name = "Partner 3",
-                Image = "/content/resources/assets/images/partner/03.png"
-            },
-            new Partner
-            {
-                Name = "Partner 4",
-                Image = "/content/resources/assets/images/partner/04.png"
-            },
-            new Partner
-            {
-                Name = "Partner 5",
-                Image = "/content/resources/assets/images/partner/05.png"
-            },
-            new Partner
-            {
-                Name = "Partner 6",
-                Image = "/content/resources/assets/images/partner/06.png"
-            },
-            new Partner
-            {
-                Name = "Partner 7",
-                Image = "/content/resources/assets/images/partner/07.png"
-            },
+                new Image
+                {
+                    Name = "Partner 1",
+                    ResourcePath = "/content/resources/assets/images/partner/01.png"
+                },
+                new Image
+                {
+                    Name = "Partner 2",
+                    ResourcePath = "/content/resources/assets/images/partner/02.png"
+                },
+                new Image
+                {
+                    Name = "Partner 3",
+                    ResourcePath = "/content/resources/assets/images/partner/03.png"
+                },
+                new Image
+                {
+                    Name = "Partner 4",
+                    ResourcePath = "/content/resources/assets/images/partner/04.png"
+                },
+                new Image
+                {
+                    Name = "Partner 5",
+                    ResourcePath = "/content/resources/assets/images/partner/05.png"
+                },
+                new Image
+                {
+                    Name = "Partner 6",
+                    ResourcePath = "/content/resources/assets/images/partner/06.png"
+                },
+                new Image
+                {
+                    Name = "Partner 7",
+                    ResourcePath = "/content/resources/assets/images/partner/07.png"
+                },
+            })
         };
     }
 
