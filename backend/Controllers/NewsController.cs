@@ -31,14 +31,6 @@ namespace MainProject.Controllers
         {
             return View(new OfficeDetailViewModel());
         }
-        //GET: RECRUITMENT
-        public ActionResult TuyenDung()
-        {
-            return View(new TuyenDungViewModel());
-        }
-        public ActionResult TuyenDungDetail()
-        {
-            return View(new TuyenDungDetailViewModel());
-        }
+
     }
 }
