@@ -34,14 +34,14 @@
                     @Html.Raw(Model.Branch.Phone)
                 </li>
             </ul>
-            <div id="map"></div>
+           @Html.Raw(Model.Branch.AddressMap)
         </div>
     </div>
 </section>
 @section scripts{
     <script>
         var locationsInput = [
-                @foreach (var item in Model.Branch.Address)
+                @foreach (var item in Model.Branch.AddressMap)
                 {
                     <text>
                         {
@@ -51,6 +51,7 @@
 					        address: '134/8A, Trần Bá Giao, Q.Gò Vấp, Tp. HCM',
 					        phone: '0914.633.990'
                         },
+
                     </text>
                 }
 			]
