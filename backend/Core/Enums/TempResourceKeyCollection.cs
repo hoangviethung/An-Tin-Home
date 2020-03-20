@@ -31,6 +31,7 @@ namespace MainProject.Core.Enums
         News,
 
         // Contact
+        Contact_Branch,
         Contact_Form_Name,
         Contact_Form_Email,
         Contact_Form_Phone,
