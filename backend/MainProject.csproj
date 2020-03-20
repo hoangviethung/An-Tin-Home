@@ -202,7 +202,7 @@
     <Content Include="Views\News\OfficeDetail.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Home\_Subscribe.cshtml" />
-    <Content Include="Views\Contact\_FormContact.cshtml" />
+    <Content Include="Views\Contact\_Form.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\resources\" />
