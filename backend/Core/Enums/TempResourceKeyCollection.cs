@@ -14,6 +14,8 @@ namespace MainProject.Core.Enums
         // Home
         Home_News,
         Home_Office,
+        An_Tin_Home,
+
         // Header
         Search_Button,
         Search_Input,
@@ -26,7 +28,8 @@ namespace MainProject.Core.Enums
         // Introduction
         Intro_Bussiness,
         Intro_Phone,
-        Description,
+        Intro_Description1,
+        Intro_Description2,
 
         // News
         News,
