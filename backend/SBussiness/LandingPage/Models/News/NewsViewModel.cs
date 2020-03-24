@@ -13,57 +13,57 @@ namespace MainProject.SBussiness.LandingPage.Models.News
             new Article
             {
                 ImageDefault = "/content/resources/assets/images/news/01.png",
-                Title = "<h3 class=\"lcl lcl-2\">LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. " +
-                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1</h3>",
-                Description = "<p class=\"lcl lcl-5\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
+                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
+                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
-                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni</p>"
+                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni"
             },
             new Article
             {
                 ImageDefault = "/content/resources/assets/images/news/02.png",
-                Title = "<h3 class=\"lcl lcl-2\">LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. " +
-                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1</h3>",
-                Description = "<p class=\"lcl lcl-5\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
+                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
+                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
-                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni</p>"
+                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni"
             },
             new Article
             {
                 ImageDefault = "/content/resources/assets/images/news/03.png",
-                Title = "<h3 class=\"lcl lcl-2\">LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. " +
-                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1</h3>",
-                Description = "<p class=\"lcl lcl-5\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
+                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
+                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
-                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni</p>"
+                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni"
             },
             new Article
             {
                 ImageDefault = "/content/resources/assets/images/news/04.png",
-                Title = "<h3 class=\"lcl lcl-2\">LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. " +
-                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1</h3>",
-                Description = "<p class=\"lcl lcl-5\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
+                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
+                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
-                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni</p>"
+                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni"
             },
             new Article
             {
                 ImageDefault = "/content/resources/assets/images/news/05.png",
-                Title = "<h3 class=\"lcl lcl-2\">LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. " +
-                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1</h3>",
-                Description = "<p class=\"lcl lcl-5\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
+                "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
+                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
-                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni</p>"
+                "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni"
             }
         };
         public Category Category { get; set; } = new Category

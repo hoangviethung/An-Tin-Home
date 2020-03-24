@@ -29,7 +29,7 @@ namespace MainProject.Core.Enums
 
         // News
         News,
-
+    
         // Contact
         Contact_Branch,
         Contact_Form_Name,

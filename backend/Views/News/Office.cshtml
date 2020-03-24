@@ -20,7 +20,7 @@
                                         <div class="img ov-h"><img class="ofcv" src="@item.ImageDefault"></div>
                                         <figcaption>
                                             <div class="project-info">
-                                                @Html.Raw(item.Title)
+                                                <div class="name">@item.Title</div>
                                                 <a class="btn read-more main-color" href="@item.GetUrl()">
                                                     @Html.GetResource(TempResourceKeyCollection.Read_More)
                                                 </a>

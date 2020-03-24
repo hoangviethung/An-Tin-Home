@@ -11,7 +11,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
         public Article Article { get; set; } = new Article
         {
             Title = "<h3 class=\"title\">LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. AENEAN MASSA.</h3>",
-            Description = "<div class=\"description\"><div class=\"ckeditor desc-item-detail\">" +
+            Body = "<div class=\"description\"><div class=\"ckeditor desc-item-detail\">" +
             "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. " +
             "Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, " +
             "ultricies nec, pellentesque eu, pretium quis, semCum sociis natoque penatibus etmagnis dis parturient montes, " +

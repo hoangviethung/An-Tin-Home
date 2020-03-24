@@ -44,7 +44,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
         };
         public Introduction Section3 { get; set; } = new Introduction
         {
-            Title = "<h3 class=\"wow fadeInUp\" data-wow-delay=\".2s\">mô tả</h3>",
+            Title = "fadeInUp\" data-wow-delay=\".2s\">mô tả</h3>",
             Image = "/content/resources/assets/images/about/about-3_01.png",
             Content = "<div class=\"description\"><div class=\"ckeditor desc-about-3-block-1\">" +
              "<h3>MÔ TẢ CHUNG</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +

@@ -20,17 +20,17 @@ namespace MainProject.SBussiness.LandingPage.Models.News
             new Article
             {
                 ImageDefault = "/content/resources/assets/images/index/item-project-01.png",
-                Title = "<div class=\"name\">Văn phòng cho thuê - Diện tích 30m2</div>"
+                Title = "Văn phòng cho thuê - Diện tích 30m2"
             },
             new Article
             {
                 ImageDefault = "/content/resources/assets/images/index/item-project-02.png",
-                Title = "<div class=\"name\">Văn phòng cho thuê - Diện tích 30m2</div>"
+                Title = "Văn phòng cho thuê - Diện tích 30m2"
             },
             new Article
             {
                 ImageDefault = "/content/resources/assets/images/index/item-project-03.png",
-                Title = "<div class=\"name\">Văn phòng cho thuê - Diện tích 30m2</div>"
+                Title = "Văn phòng cho thuê - Diện tích 30m2"
             }
         };
     }

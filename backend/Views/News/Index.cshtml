@@ -1,4 +1,6 @@
-﻿@model MainProject.SBussiness.LandingPage.Models.News.NewsViewModel
+﻿@using MainProject.Core
+@using MainProject.Core.Enums
+@model MainProject.SBussiness.LandingPage.Models.News.NewsViewModel
 
 <section class="news">
     <div class="container">
@@ -12,8 +14,11 @@
                 <div class="item-news wow fadeIn" data-wow-delay=".2s">
                     <div class="img ov-h" data-getHeight><a href="tin-tuc-chi-tiet.html"><img class="ofcv" src="@item.ImageDefault" alt=""></a></div>
                     <div class="content ov-h" data-setHeight="575.98">
-                        @Html.Raw(item.Title)
-                        @Html.Raw(item.Description)
+                        <h3 class="lcl lcl-2">@item.Title</h3>
+                        <p class="lcl lcl-5">@item.Description</p>
+                        <a class="btn read-more main-color" href="@item.GetUrl()">
+                            @Html.GetResource(TempResourceKeyCollection.Read_More)
+                        </a>
                     </div>
                 </div>
             }
