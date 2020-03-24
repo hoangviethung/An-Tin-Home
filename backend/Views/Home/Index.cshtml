@@ -65,7 +65,10 @@
         <div class="block-intro">
             <div class="block-title">
                 <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.OfficeCategory.Title</h2>
-                @Html.Raw(Model.OfficeCategory.Description)
+                <h3 class="wow fadeInUp" data-wow-delay=".2s">@Html.GetResource(TempResourceKeyCollection.An_Tin_Home)</h3>
+                <p class="lcl lcl-2">
+                   @Model.OfficeCategory.Description
+                </p>
             </div>
             <div class="number-of-page">
                 <h4>03.</h4><a class="wow fadeInDown" data-wow-delay=".2s" href="#">@Html.GetResource(TempResourceKeyCollection.Home_Office)</a>

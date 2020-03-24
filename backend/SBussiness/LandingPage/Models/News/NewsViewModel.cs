@@ -15,7 +15,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
                 ImageDefault = "/content/resources/assets/images/news/01.png",
                 Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
                 "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
-                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Body = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
@@ -26,7 +26,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
                 ImageDefault = "/content/resources/assets/images/news/02.png",
                 Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
                 "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
-                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Body = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
@@ -37,7 +37,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
                 ImageDefault = "/content/resources/assets/images/news/03.png",
                 Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
                 "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
-                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Body = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
@@ -48,7 +48,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
                 ImageDefault = "/content/resources/assets/images/news/04.png",
                 Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
                 "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
-                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Body = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
@@ -59,19 +59,18 @@ namespace MainProject.SBussiness.LandingPage.Models.News
                 ImageDefault = "/content/resources/assets/images/news/05.png",
                 Title = "LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT." +
                 "1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1 LOREM IPSUM DOLOR SIT AMET, CON SECTE TUER ELIT. 1",
-                Description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
+                Body = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
                 "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni et magni Lorem ipsum dolor sit amet, " +
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni"
             }
         };
-        public Category Category { get; set; } = new Category
+        public Category NewsCategory { get; set; } = new Category
         {
             Title = "TIN TỨC",
-            Description = "<h3 class=\"wow fadeInUp\" data-wow-delay=\".2s\">AN TÍN HOMES</h3>" +
-            "<p class=\"lcl lcl-2\">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, " +
-            "venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>"
+            Description ="Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, " +
+                            "venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium."
         };
     }
 }

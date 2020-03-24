@@ -5,8 +5,11 @@
 <section class="news">
     <div class="container">
         <div class="block-title">
-            <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.Category.Title</h2>
-            @Html.Raw(Model.Category.Description)
+            <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.NewsCategory.Title</h2>
+            <h3 class="wow fadeInUp" data-wow-delay=".2s">@Html.GetResource(TempResourceKeyCollection.An_Tin_Home)</h3>
+            <p class="lcl lcl-2">
+                @Model.NewsCategory.Description
+            </p>
         </div>
         <div class="list-news">
             @foreach (var item in Model.Articles)
@@ -15,7 +18,7 @@
                     <div class="img ov-h" data-getHeight><a href="tin-tuc-chi-tiet.html"><img class="ofcv" src="@item.ImageDefault" alt=""></a></div>
                     <div class="content ov-h" data-setHeight="575.98">
                         <h3 class="lcl lcl-2">@item.Title</h3>
-                        <p class="lcl lcl-5">@item.Description</p>
+                        <p class="lcl lcl-5">@item.Body</p>
                         <a class="btn read-more main-color" href="@item.GetUrl()">
                             @Html.GetResource(TempResourceKeyCollection.Read_More)
                         </a>
