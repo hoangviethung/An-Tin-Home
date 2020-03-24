@@ -189,28 +189,34 @@ const ajaxMailFooter = () => {
 const ajaxFormContact = () => {
 	$('.block-send-mail .block-form .submit button').on('click', function(e) {
 		e.preventDefault();
+		var form = $(".block-send-mail form").removeData("validator").removeData("unobtrusiveValidation");
+		$.validator.unobtrusive.parse(form);
 		const url = $(this).attr('data-url');
 		const name = $('.contact .block-send-mail .block-form input.name').val();
 		const email = $('.contact .block-send-mail .block-form input.email').val();
 		const phone = $('.contact .block-send-mail .block-form input.phone-number').val();
 		const content = $('.contact .block-send-mail .block-form textarea.content').val();
-		$.ajax({
-			type: "POST",
-			url: url,
-			data: {
-				name: name,
-				email: email,
-				phone: phone,
-				content: content,
-			},
-			success: function(res) {
-				if (res.Code === 200) {
-					alert(res.Message)
-				} else {
-					alert(res.Message)
+		if ($(".block-send-mail form").valid() === true) {
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: {
+					name: name,
+					email: email,
+					phone: phone,
+					content: content,
+				},
+				success: function(res) {
+					if (res.Code === 200) {
+						alert(res.Message)
+					} else {
+						alert(res.Message)
+					}
 				}
-			}
-		});
+			});
+		} else {
+			console.log('Không được request lên url vì valid');
+		}
 	});
 }
 
@@ -267,10 +273,10 @@ const showSearch = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 	Loading().then(() => {
-		new WOW().init();
 		// GET HEIGHT SOMWE ELEMENT
 		setHeightOverFolowBySomeElement('.about-2, .about-3, .list-news');
 	});
+	new WOW().init();
 	// SLIDER
 	mainSlider();
 	sliderPartner();

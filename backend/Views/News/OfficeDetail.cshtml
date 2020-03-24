@@ -1,11 +1,11 @@
 ﻿@using MainProject.Core
 @using MainProject.Core.Enums
-@model MainProject.SBussiness.LandingPage.Models.News.OfficeDetailViewModel
+@model MainProject.SBussiness.LandingPage.Models.News.NewsDetailViewModel
 
 <section class="offices-detail">
     <div class="container">
-        <div class="title wow fadeInDown" data-wow-delay=".2s">@Model.Section1.Title</div>
-        @Html.Raw(Model.Section1.Description)
+        <div class="title wow fadeInDown" data-wow-delay=".2s">@Model.Article.Title</div>
+        @Html.Raw(Model.Article.Description)
     </div>
 </section>
 

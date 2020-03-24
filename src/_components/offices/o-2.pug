@@ -19,7 +19,7 @@ section.offices-detail
 						.description
 							.ckeditor.desc-item-detail
 								p Địa chỉ: Harvest Tower - 12 Lê Thánh Tôn, P. Bến Nghé, Quận 1, TP.HCM
-						#map
+						iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489.923423396314!2d106.7050087233855!3d10.78161303632002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f493240e7c1%3A0xdf3ac69e8168643c!2sHarvest%20Tower!5e0!3m2!1sen!2s!4v1584696311009!5m2!1sen!2s' width='100%' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
 					.content(tab-id="tab-02")
 						.ckeditor.desc-item-detail
 							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Donec quam felis, ultricies nec, pellentesque eu, pretium quis, semCum sociis natoque penatibus etmagnis dis parturient montes, nascetur Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Donec quam felis, ultricies nec, pellentesque eu, pretium quis, semCum sociis natoque penatibus etmagnis dis parturient montes, nascetur
@@ -51,8 +51,3 @@ section.offices-detail
 								.item
 									a(href="./assets/images/news/0"+i+".png" data-fancybox="list-images")
 										img.ofcv.lazyload.blur-up(data-src="./assets/images/news/0"+i+".png", alt="alt")
-						// DANH SÁCH HÌNH ẢNH POPUP - GẮN ĐÚNG LINK ẢNH + DATA FANCYBOX
-						.d-n
-							-for(i=1;i<6;i++)
-								a(href="./assets/images/news/0"+i+".png" data-fancybox="list-images")
-									img(src="./assets/images/news/0"+i+".png", alt="")
