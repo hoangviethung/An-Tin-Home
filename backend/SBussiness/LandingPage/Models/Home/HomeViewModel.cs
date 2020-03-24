@@ -1,4 +1,5 @@
 ﻿using MainProject.Core;
+using MainProject.Core.Enums;
 using MainProject.Framework.Helpers;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,10 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
         };
         public Category IntroCategory { get; set; } = new Category
         {
-
+            Title = "Giới thiệu",
         };
         public Introduction Section1 { get; set; } = new Introduction
         {
-            Title = "Giới thiệu",
             Image = "/content/resources/assets/images/index/index-1-about.png",
             Content = "<h3>DỊCH VỤ CHO THUÊ VĂN PHÒNG AN TÍN HOMES</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +
             "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +
@@ -86,10 +86,12 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
             Title = "CHO THUÊ VĂN PHÒNG",
             Description = "<h3 class=\"wow fadeInUp\" data-wow-delay=\".2s\">AN TÍN HOMES</h3>" +
                             "<p class=\"lcl lcl-2\">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. " +
-                            "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>"
+                            "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>",
+ 
         };
         public List<Article> Offices { get; set; } = new List<Article>
         {
+            
                new Article
                {
                    Title = "CHO THUÊ VĂN PHÒNG TẠI TP.HCM",
@@ -125,7 +127,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
                },
         };
     }
-
+    
     public class HeaderViewModel
     {
         public List<Banner> Banners { get; set; } = new List<Banner>

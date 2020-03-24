@@ -41,14 +41,17 @@
             <figure class="ov-h" data-getHeight>
                 <img class="ofcv" src="@Model.Section2.Image" alt="">
                 <figcaption>
-                    @Html.Raw(Model.Section2.Title)
+                    <h3 class="wow fadeInUp" data-wow-delay=".2s">@Model.Section2.Title</h3>
+                    <p>@Html.GetResource(TempResourceKeyCollection.Description)</p>
                 </figcaption>
             </figure>
         </div>
         <div class="col-md-6 box-content" data-setHeight="767.98">
-            @Html.Raw(Model.Section2.Content)
+            <div class="description">
+                @Html.Raw(Model.Section2.Content)
+             </div>
+            </div>
         </div>
-    </div>
     <div class="block row no-gutters">
         <div class="col-md-6 box-content" data-setHeight="767.98">
             @Html.Raw(Model.Section3.Content)
@@ -57,7 +60,8 @@
             <figure class="ov-h" data-getHeight>
                 <img class="ofcv" src="@Model.Section3.Image" alt="">
                 <figcaption>
-                    @Html.Raw(Model.Section3.Title)
+                    <h3 class="wow fadeInUp" data-wow-delay=".2s">@Model.Section3.Title</h3>
+                    <p>@Html.GetResource(TempResourceKeyCollection.Description)</p>
                 </figcaption>
             </figure>
         </div>

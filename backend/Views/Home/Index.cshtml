@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 content-about-us">
-                <h2 class="wow fadeInLeft" data-wow-delay=".2s">@Model.Section1.Title</h2>
+                <h2 class="wow fadeInLeft" data-wow-delay=".2s">@Model.IntroCategory.Title</h2>
                 <div class="content">
                     @Html.Raw(Model.Section1.Content)
                     <a class="btn read-more main-color" href="@(Model.IntroCategory != null ? Model.IntroCategory.GetPrefixUrl() : "")">
@@ -68,7 +68,7 @@
                 @Html.Raw(Model.OfficeCategory.Description)
             </div>
             <div class="number-of-page">
-                <h4>03.</h4><a class="wow fadeInDown" data-wow-delay=".2s" href="#">@Model.OfficeCategory.Title</a>
+                <h4>03.</h4><a class="wow fadeInDown" data-wow-delay=".2s" href="#">@Html.GetResource(TempResourceKeyCollection.Home_Office)</a>
             </div>
         </div>
         <div class="container">

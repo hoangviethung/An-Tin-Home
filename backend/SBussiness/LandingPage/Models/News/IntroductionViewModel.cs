@@ -12,7 +12,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
 
         public Introduction Section1 { get; set; } = new Introduction
         {
-            Title = "AN TÍN HOMES",
+            Title = "giới thiệu",
             Content = "<div class=\"description\">" +
             "<div class=\"ckeditor desc-about-block-1\">" +
             "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> " +
@@ -28,9 +28,9 @@ namespace MainProject.SBussiness.LandingPage.Models.News
         };
         public Introduction Section2 { get; set; } = new Introduction
         {
-            Title = "<h3 class=\"wow fadeInUp\" data-wow-delay=\".2s\">mô tả</h3>",
+            Title = "mô tả",
             Image = "/content/resources/assets/images/about/about-3_01.png",
-            Content = "<div class=\"description\"><div class=\"ckeditor desc-about-3-block-1\">" +
+            Content = "<div class=\"ckeditor desc-about-3-block-1\">" +
             "<h3>MÔ TẢ CHUNG</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +
             "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, " +
             "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
@@ -40,11 +40,11 @@ namespace MainProject.SBussiness.LandingPage.Models.News
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>" +
-            "</div></div>"
+            "</div>"
         };
         public Introduction Section3 { get; set; } = new Introduction
         {
-            Title = "fadeInUp\" data-wow-delay=\".2s\">mô tả</h3>",
+            Title = "giá cả",
             Image = "/content/resources/assets/images/about/about-3_01.png",
             Content = "<div class=\"description\"><div class=\"ckeditor desc-about-3-block-1\">" +
              "<h3>MÔ TẢ CHUNG</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +
