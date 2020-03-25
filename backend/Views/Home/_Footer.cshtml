@@ -32,21 +32,14 @@
                 }
             </div>
             <div class="col-lg-4">
-                <div class="title-footer">@Html.GetResource(TempResourceKeyCollection.Subscribe_Title)</div>
+                <div class="title-footer">@Html.GetResource(ResourceKeyCollection.Subscribe_Title)</div>
                 <div class="block-form">
                     @Html.Partial("_Subscribe", new MainProject.SBussiness.LandingPage.Models.Home.SubscribeModel())
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="title-footer">MENU</div>
-                <ul class="list-link">
-                    <div class="item"><a class="link" href="index.html">TRANG CHỦ</a></div>
-                    <div class="item"><a class="link" href="gioi-thieu.html">GIỚI THIỆU</a></div>
-                    <div class="item"><a class="link" href="cho-thue-van-phong.html">CHO THUÊ VĂN PHÒNG</a></div>
-                    <div class="item"><a class="link" href="tin-tuc.html">TIN TỨC</a></div>
-                    <div class="item"><a class="link" href="tuyen-dung.html">TUYỂN DỤNG</a></div>
-                    <div class="item"><a class="link" href="lien-he.html">LIÊN HỆ</a></div>
-                </ul>
+                @Html.Raw(Model.MainMenu)
             </div>
         </div>
     </div>

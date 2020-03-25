@@ -55,7 +55,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
             "Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu, pretium quis, " +
             "semCum sociis natoque penatibus etmagnis dis parturient montes, nascetur.</p></div></div>"
         };
-        public List<Article> Slideses { get; set; } = new List<Article>
+        public List<Article> Articles { get; set; } = new List<Article>
         {
             new Article
             {

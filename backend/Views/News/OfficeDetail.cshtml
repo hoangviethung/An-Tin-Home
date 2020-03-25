@@ -1,25 +1,29 @@
 ﻿@using MainProject.Core
 @using MainProject.Core.Enums
-@model MainProject.SBussiness.LandingPage.Models.News.OfficeDetailViewModel
+@model MainProject.SBussiness.LandingPage.Models.News.NewsDetailViewModel
 
 <section class="offices-detail">
     <div class="container">
-        <div class="title wow fadeInDown" data-wow-delay=".2s">@Model.Section1.Title</div>
-        @Html.Raw(Model.Section1.Description)
+        <div class="title wow fadeInDown" data-wow-delay=".2s">@Model.Article.Title</div>
+        <div class="block-tab-offices-detail">
+            <div class="tab-container">
+                @Html.Raw(Model.Article.Body)
+            </div>
+        </div>
     </div>
 </section>
 
 @section scripts{
     <script type="text/javascript" src="/content/resources/js/map.min.js"></script>
     <script>
-			var locationsInput = [
-				{
-					lat: 10.1251,
-					lng: 11.125,
-					title: 'Home',
-					address: '134/8A, Trần Bá Giao, Q.Gò Vấp, Tp. HCM',
-					phone: '0914.633.990'
-				}
-			]
-		</script>
+        var locationsInput = [
+            {
+                lat: 10.1251,
+                lng: 11.125,
+                title: 'Home',
+                address: '134/8A, Trần Bá Giao, Q.Gò Vấp, Tp. HCM',
+                phone: '0914.633.990'
+            }
+        ]
+    </script>
 }

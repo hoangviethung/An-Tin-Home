@@ -129,6 +129,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
     
     public class HeaderViewModel
     {
+        public string MainMenu { get; set; }
         public List<Banner> Banners { get; set; } = new List<Banner>
         {
             new Banner
@@ -154,6 +155,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 
     public class FooterViewModel
     {
+        public string MainMenu { get; set; }
         public Branch Branch { get; set; } = new Branch
         {
             Address = "Add: Tòa nhà H3, 384 Hoàng Diệu, Quận 4, TP.Hồ Chí Minh",

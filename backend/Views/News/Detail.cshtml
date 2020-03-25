@@ -4,11 +4,15 @@
 
 <section class="news-detail">
     <div class="container">
-        @Html.Raw(Model.Article.Title)
-        @Html.Raw(Model.Article.Body)
+        <h3 class="title">@Model.Article.Title</h3>
+        <div class="description">
+            <div class="ckeditor desc-item-detail">
+                @Html.Raw(Model.Article.Body)
+            </div>
+        </div>
         <ul class="social-media">
-            <li class="item"><a href="#"><img class="lazyload blur-up" data-src="./assets/icons/facebook.svg" alt=""></a></li>
-            <li class="item"><a href="#"><img class="lazyload blur-up" data-src="./assets/icons/mail.svg" alt=""></a></li>
+            <li class="item"><a href="#"><img class="lazyload blur-up" data-src="/Content/resources/assets/icons/facebook.svg" alt=""></a></li>
+            <li class="item"><a href="#"><img class="lazyload blur-up" data-src="/Content/resources/assets/icons/mail.svg" alt=""></a></li>
         </ul>
     </div>
 </section>
@@ -17,13 +21,17 @@
         <div class="slider-item-others">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach (var item in Model.Slideses)
+                    @foreach (var item in Model.Articles)
                     {
                         <div class="swiper-slide">
-                            <a href="tin-tuc-chi-tiet.html">
+                            <a href="@item.GetUrl()">
                                 <figure class="ov-h">
-                                    <img class="ofcv" src="@item.ImageDefault" alt="alt">
-                                    <figcaption><a class="btn read-more main-color" href="tin-tuc-chi-tiet.html">xem</a></figcaption>
+                                    <img class="ofcv" src="@item.ImageDefault" alt="@item.Title">
+                                    <figcaption>
+                                        <a class="btn read-more main-color" href="@item.GetUrl()">
+                                            @Html.GetResource(ResourceKeyCollection.Read_More)
+                                        </a>
+                                    </figcaption>
                                 </figure>
                             </a>
                         </div>

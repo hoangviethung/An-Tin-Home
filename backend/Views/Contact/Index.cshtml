@@ -7,11 +7,11 @@
         <div class="container">
             <div class="block-title">
                 <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.Category.Title</h2>
-                <h3 class="wow fadeInUp" data-wow-delay=".2s">@Html.GetResource(TempResourceKeyCollection.Office_Name)</h3>
+                <h3 class="wow fadeInUp" data-wow-delay=".2s">@Html.GetResource(ResourceKeyCollection.Contact_Description)</h3>
                 <p class="lcl lcl-2">@Model.Category.Description</p>
             </div>
             <div class="block-form">
-                @Html.Partial("_Form", new MainProject.SBussiness.LandingPage.Models.Contact.ContactManageViewModel())
+                @Html.Partial("_Form", new MainProject.SBussiness.LandingPage.Models.Contact.ContactManageModel())
             </div>
         </div>
     </div>
@@ -20,21 +20,21 @@
         <div class="block-address">
             <div class="container">
                 <div class="block-title">
-                    <h2 class="wow fadeInDown" data-wow-delay=".2s">@Html.GetResource(TempResourceKeyCollection.Contact_Branch)</h2>
+                    <h2 class="wow fadeInDown" data-wow-delay=".2s">@Html.GetResource(ResourceKeyCollection.Contact_Branch)</h2>
                     <h3 class="wow fadeInUp" data-wow-delay=".2s">@Html.Raw(Model.Branches[0].OfficeName)</h3>
                     <p class="lcl lcl-2">@Html.Raw(Model.Branches[0].Description)</p>
                 </div>
                 <ul class="list-info-company">
                     <li class="item">
-                        <span>@Html.GetResource(TempResourceKeyCollection.Branch_Address):</span>
+                        <span>@Html.GetResource(ResourceKeyCollection.Contact_Branch):</span>
                         <p>@Model.Branches[0].Address</p>
                     </li>
                     <li class="item">
-                        <span>@Html.GetResource(TempResourceKeyCollection.Branch_Email):</span>
+                        <span>Email:</span>
                         <p>@Model.Branches[0].Email</p>
                     </li>
                     <li class="item">
-                        <span>@Html.GetResource(TempResourceKeyCollection.Branch_Fax):</span>
+                        <span>Fax:</span>
                         <p>@Model.Branches[0].Fax</p>
                     </li>
                     <li class="item phone">
@@ -65,4 +65,15 @@
 			]
     </script>
     <script type="text/javascript" src="/content/resources/js/map.min.js"></script>
+    @*@{
+        string key = SettingHelper.GetValueSetting("SiteKeyRecaptcha");
+    }
+    <script src="https://www.google.com/recaptcha/api.js?render=@key"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('@key', { action: 'AnTinHome' }).then(function (token) {
+                document.getElementById("g-recaptcha-response").value = token;
+            });
+        });
+    </script>*@
 }

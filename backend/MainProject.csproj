@@ -124,22 +124,21 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Core\Enums\TempResourceKeyCollection.cs" />
-    <Compile Include="Core\Partner.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Framework\Helpers\JsonHelper.cs" />
     <Compile Include="Framework\Helpers\ResourceHelper.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Framework\Models\PagingModel.cs" />
+    <Compile Include="Framework\Models\PagingStyleModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Contact\ContactViewModel.cs" />
-    <Compile Include="SBussiness\LandingPage\Models\Contact\FormContactViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\Contact\ContactManageModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Home\HomeViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\IntroductionViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\NewsDetailViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\NewsViewModel.cs" />
-    <Compile Include="SBussiness\LandingPage\Models\News\OfficeDetailViewModel.cs" />
-    <Compile Include="SBussiness\LandingPage\Models\News\OfficeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\MainProject.Core.dll" />

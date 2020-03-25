@@ -1,4 +1,5 @@
 ﻿using MainProject.Core;
+using MainProject.Framework.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,11 +67,12 @@ namespace MainProject.SBussiness.LandingPage.Models.News
                 "consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magni"
             }
         };
-        public Category NewsCategory { get; set; } = new Category
+        public Category Category { get; set; } = new Category
         {
             Title = "TIN TỨC",
             Description ="Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, " +
                             "venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium."
         };
+        public PagingModel PagingModel { get; set; }
     }
 }

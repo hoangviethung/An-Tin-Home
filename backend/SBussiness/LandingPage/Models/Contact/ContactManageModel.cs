@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MainProject.SBussiness.LandingPage.Models.Contact
 {
-    public class ContactManageViewModel
+    public class ContactManageModel
     {
         public string Name { get; set; }
         public string Email { get; set; }

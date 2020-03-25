@@ -10,7 +10,7 @@
                 <div class="content">
                     @Html.Raw(Model.Section1.Content)
                     <a class="btn read-more main-color" href="@(Model.IntroCategory != null ? Model.IntroCategory.GetPrefixUrl() : "")">
-                        @Html.GetResource(TempResourceKeyCollection.Read_More)
+                        @Html.GetResource(ResourceKeyCollection.Read_More)
                     </a>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     }
                     <div class="block-view-more">
                         <a class="btn read-more white" href="@Model.NewsCategory.GetPrefixUrl()">
-                            @Html.GetResource(TempResourceKeyCollection.Read_More)
+                            @Html.GetResource(ResourceKeyCollection.Read_More)
                         </a>
                     </div>
                 </div>
@@ -65,13 +65,13 @@
         <div class="block-intro">
             <div class="block-title">
                 <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.OfficeCategory.Title</h2>
-                <h3 class="wow fadeInUp" data-wow-delay=".2s">@Html.GetResource(TempResourceKeyCollection.Office_Name)</h3>
+                <h3 class="wow fadeInUp" data-wow-delay=".2s">@Html.GetResource(ResourceKeyCollection.Office_Description)</h3>
                 <p class="lcl lcl-2">
                    @Model.OfficeCategory.Description
                 </p>
             </div>
             <div class="number-of-page">
-                <h4>03.</h4><a class="wow fadeInDown" data-wow-delay=".2s" href="#">@Html.GetResource(TempResourceKeyCollection.Home_Office)</a>
+                <h4>03.</h4><a class="wow fadeInDown" data-wow-delay=".2s" href="#">@Html.GetResource(ResourceKeyCollection.Home_Office)</a>
             </div>
         </div>
         <div class="container">
@@ -90,7 +90,7 @@
                                                     <div class="name">@item.Title</div>
                                                     <div class="desc lcl lcl-3">@item.Description</div>
                                                     <a class="btn read-more main-color" href="@item.GetUrl()">
-                                                        @Html.GetResource(TempResourceKeyCollection.Read_More)
+                                                        @Html.GetResource(ResourceKeyCollection.Read_More)
                                                     </a>
                                                 </div>
                                             </figcaption>
@@ -107,7 +107,7 @@
             </div>
             <div class="block-view-more ta-c">
                 <a class="btn read-more main-color" href="@Model.OfficeCategory.GetPrefixUrl()">
-                    @Html.GetResource(TempResourceKeyCollection.Read_More)
+                    @Html.GetResource(ResourceKeyCollection.Read_More)
                 </a>
             </div>
         </div>
