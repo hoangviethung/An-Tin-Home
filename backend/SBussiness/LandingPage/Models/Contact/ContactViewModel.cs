@@ -34,9 +34,9 @@ namespace MainProject.SBussiness.LandingPage.Models.Contact
         public Category Category { get; set; } = new Category
         {
             Title = "Liên Hệ",
-            Description = "<h3 class=\"wow fadeInUp\" data-wow-delay=\".2s\">AN TÍN HOMES</h3><p class=\"lcl lcl-2\">Donec pede justo, " +
+            Description = "Donec pede justo,"+
             "fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. " +
-            "Nullam dictum felis eu pede mollis pretium.</p>"
+            "Nullam dictum felis eu pede mollis pretium."
         };
     }
 }

@@ -14,7 +14,7 @@ namespace MainProject.Core.Enums
         // Home
         Home_News,
         Home_Office,
-        An_Tin_Home,
+       Office_Name,
 
         // Header
         Search_Button,
