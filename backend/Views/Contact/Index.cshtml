@@ -26,13 +26,16 @@
                 </div>
                 <ul class="list-info-company">
                     <li class="item">
-                        @Html.Raw(Model.Branches[0].Address)
+                        <span>@Html.GetResource(TempResourceKeyCollection.Branch_Address):</span>
+                        <p>@Model.Branches[0].Address</p>
                     </li>
                     <li class="item">
-                        @Html.Raw(Model.Branches[0].Email)
+                        <span>@Html.GetResource(TempResourceKeyCollection.Branch_Email):</span>
+                        <p>@Model.Branches[0].Email</p>
                     </li>
                     <li class="item">
-                        @Html.Raw(Model.Branches[0].Fax)
+                        <span>@Html.GetResource(TempResourceKeyCollection.Branch_Fax):</span>
+                        <p>@Model.Branches[0].Fax</p>
                     </li>
                     <li class="item phone">
                         @Html.Raw(Model.Branches[0].Phone)

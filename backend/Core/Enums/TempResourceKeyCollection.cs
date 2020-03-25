@@ -40,5 +40,8 @@ namespace MainProject.Core.Enums
         Contact_Form_Email,
         Contact_Form_Phone,
         Contact_Form_Content,
+        Branch_Address,
+        Branch_Email,
+        Branch_Fax,
     }
 }
