@@ -67,7 +67,7 @@
                 <h2 class="wow fadeInDown" data-wow-delay=".2s">@Model.OfficeCategory.Title</h2>
                 <h3 class="wow fadeInUp" data-wow-delay=".2s">@Html.GetResource(ResourceKeyCollection.Office_Description)</h3>
                 <p class="lcl lcl-2">
-                   @Model.OfficeCategory.Description
+                    @Model.OfficeCategory.Description
                 </p>
             </div>
             <div class="number-of-page">
@@ -137,11 +137,18 @@
         </div>
         <!-- DANH SÁCH HÌNH ẢNH POPUP - GẮN ĐÚNG LINK ẢNH + DATA FANCYBOX-->
         <div class="d-n">
-            @foreach (var item in JsonHelper.Deserialize<List<Image>>(Model.Section2.Image) ?? new List<Image>())
-            {
-                <a href="@item.ResourcePath" data-fancybox="list-images">
-                    <img src="@item.ResourcePath" alt="">
-                </a>
+            @{
+                int count = 0;
+                foreach (var item in JsonHelper.Deserialize<List<Image>>(Model.Section2.Image) ?? new List<Image>())
+                {
+                    if (count > 0)
+                    {
+                        <a href="@item.ResourcePath" data-fancybox="list-images">
+                            <img src="@item.ResourcePath" alt="">
+                        </a>
+                    }
+                    count += 1;
+                }
             }
         </div>
     </div>
